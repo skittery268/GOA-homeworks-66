@@ -1,12 +1,10 @@
-# 12) დააკვირდით მოცემულ flowchart-ს, ახსენით მისი მუშაობის პრინციპი. მისი მიხედვით შეადგინეთ პროგრამა და დაწერეთ რა შედეგს გამოიტანს კოდი იმ შემთხვევაში როცა მომხმარებელი არის 14 წლის და არ არის სტუდენტი.
+# 11) მომხმარებელს შემოატანინეთ ნებისმიერი რიცხვი, შემდეგ კი 1-დან მომხმარებლის მიერ შეყვანილი რიცხვის ჩათვლით არსებული ყველა რიცხვის ჯამი გამოთვალეთ და გამოიტანეთ ეკრანზე.
 
-age = int(input("Please enter any number: "))
-is_student = input("You are student?(yes/no): ")
-is_student_lower = is_student.lower()
+number = int(input("Please enter any number: "))
 
-if age < 18 and is_student_lower == "yes":
-    print("20% discount")
-elif age < 18 and is_student_lower == "no":
-    print("10% discount")
-else:
-    print("regular price")
+count = 1
+sum = 0
+while count <= number:
+    sum += count
+    count += 1
+print(sum)
