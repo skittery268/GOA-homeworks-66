@@ -1,0 +1,1 @@
+# 6) Sololearn-ში გაიარეთ While loops სექცია:

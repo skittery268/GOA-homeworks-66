@@ -1,0 +1,30 @@
+<!-- 
+2) შექმენით Multi Page Website - ი რომელიც იქნება Facebook - ის მსგავსი, პირველი გვერდი - (Registration Page) უნდა გქონდეთ რეგისტრაციის, 
+სადაც მომხმარებელმა უნდა შემოიტანოს თავისი ინფორმაცია როგორიცაა (Name,Lastname,Email) ეს ინფორმაცია აუცილებლია იყოს შემოტანილი ამის 
+გასაკეთებლად უნდა გამოიყენოთ required, უნდა გქონდეთ <a>Go To The Next Page</a> tag - ი რომელზე დაჭერისას მომხმარებელი უნდა გადავიდეს 
+შემდეგ გვერდზე, მეორე გვერდი (About Facebook) უნდა იყოს Facebook - ის შესახებ თქვენი დავალებაა, რომ მოიძიოთ ინფორმაცია Facebook - ის შესახებ. 
+გამოიყენეთ heading - ები <h1></h1>,<h2></h2> (h1 - h6), გაალამაზეთ Multi Page Website ფოტოებით  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="Lastname">Lastname: </label>
+        <input type="text" id="Lastname" name="Lastname" required>
+        <br>
+        <label for="Email">Email: </label>
+        <input type="email" id="Email" name="Email" required>
+        <br>
+        <a href="about.html">Go To The Next Page</a>
+    </form>
+</body>
+</html>

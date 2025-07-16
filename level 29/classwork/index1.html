@@ -1,0 +1,40 @@
+<!-- 1) შექმენით სარეგისტრაციო ფორმა, სადაც მომხმარებელს მოთხოვთ იმეილს, სახელს და გვარს, პაროლს, გენდერს, დაბადების თარიღს და პროფილის ფოტოს, გამოიყენეთ შესაბამისი input ტიპები, თავისი სახელებით და მნიშვნელობებით, აგრეთვე დაუმატეთ ფორმას, reset და submit ღილაკები -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="sr">Surename: </label>
+        <input type="text" name="Surename" id="sr">
+        <br>
+        <label for="pas">Password: </label>
+        <input type="password" name="password" id="pas">
+        <br>
+        <label for="boy">Boy</label>
+        <input type="radio" name="Boy" id="boy">
+        <label for="girl">Girl</label>
+        <input type="radio" name="girl" id="girl">
+        <br>
+        <label for="data">Data: </label>
+        <input type="text" name="data" id="data">
+        <br>
+        <label for="img">profile IMG: </label>
+        <input type="file" name="img" id="img">
+        <br>
+        <input type="reset" value="Reset">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

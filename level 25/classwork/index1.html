@@ -1,0 +1,45 @@
+<!-- შექმენით single-page website თქვენი საყვარელი მუსიკის ჟანრის შესახებ, რომელსაც დასაწყისში აუცილებლად ექნება ნავიგაცია (გამოიყენეთ <nav> თეგი და მასში ჩააშენეთ ლინკები <a> თეგის საშუალებით.) საიტს უნდა ჰქონდეს 3 სხვადასხვა სექცია: Home, About this genre, songs of this genre. გამოიყენეთ id ატრიბუტი იმისთვის, რომ nav თეგიდან  საიტის სხვადასხვა სექციებში გადახვიდეთ. საიტი უნდა იყოს მრავალფეროვანი (დაამატეთ ფოტოები, ღილაკები და ა.შ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">მთავარი</a></li>
+            <li><a href="#about">ჟანრის შესახებ</a></li>
+            <li><a href="#songs">სიმღერები</a></li>
+       </ul>
+    </nav>
+
+    <div id="home">
+        <h1>კეთილი იყოს თქვენი მობრძანება როკ სამყაროში!</h1>
+        <p>როკი არის ენერგიის, ემოციისა და თავისუფლების მუსიკა.</p>
+        <img src="img1.jpg" width="400">
+        <br>
+        <button>გაიგე მეტი</button> 
+    </div>
+
+    <div id="about">
+        <h2>როკ მუსიკის შესახებ</h2>
+        <p>როკი წარმოიშვა 1950-იან წლებში და სწრაფად გახდა ერთ-ერთი ყველაზე გავლენიანი ჟანრი მსოფლიოში. ის აერთიანებს გიტარის ძლიერ ხმას, დრამებს და ხშირად პროტესტის ტონალობას.</p>
+        <img src="img2.jpg" width="300">
+    </div>
+
+    <div id="songs">
+        <h2>როკ სიმღერები</h2>
+        <ul>
+          <li>Queen – Bohemian Rhapsody</li>
+          <li>Nirvana – Smells Like Teen Spirit</li>
+          <li>Led Zeppelin – Stairway to Heaven</li>
+          <li>AC/DC – Highway to Hell</li>
+          <li>The Rolling Stones – Satisfaction</li>
+        </ul>
+        <button>დაბრუნდი დასაწყისში</button>
+    </div>
+</body>
+</html>
