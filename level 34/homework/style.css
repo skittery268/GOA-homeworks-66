@@ -1,0 +1,25 @@
+.header {
+    color: red;
+    margin: 5px;
+    padding: 5px;
+    text-shadow: 2px 2px 3px black;
+}
+
+h2 {
+    color: chocolate;
+    text-shadow: 1px 1px 2px black;
+}
+
+.first-p {
+    color: blue;
+    margin: 5px;
+    padding: 5px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.second-p {
+    color: rgb(31, 90, 255);
+    margin: 5px;
+    padding: 5px;
+    text-shadow: 1px 1px 2px black;
+}
