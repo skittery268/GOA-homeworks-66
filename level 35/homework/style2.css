@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.car-card1 {
+    box-sizing: border-box;
+    width: 510px;
+    height: 510px;
+    box-shadow: 10px 10px 10px black;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin: 30px;
+}
+
+.car-card1 h1 {
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.car-card1 p {
+    margin: 0px;
+}
+
+.car-picture1 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+
+    background-image: url("./images/car1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.car-card2 {
+    box-sizing: border-box;
+    width: 530px;
+    height: 510px;
+    box-shadow: 10px 10px 10px black;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin: 30px;
+}
+
+.car-card2 h1 {
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.car-card2 p {
+    margin: 0px;
+}
+
+.car-picture2 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+
+    background-image: url("./images/car2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.car-card3 {
+    box-sizing: border-box;
+    width: 510px;
+    height: 510px;
+    box-shadow: 10px 10px 10px black;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin: 30px;
+}
+
+.car-card3 h1 {
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.car-card3 p {
+    margin: 0px;
+}
+
+.car-picture3 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+
+    background-image: url("./images/car3.jpg");
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.car-card1 {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px black;
+    height: 200px;
+    width: 297px;
+    margin: 30px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    text-align: center;
+    color: black;
+
+    background-image: url("./images/car1.jpg");
+    background-size: contain;
+    background-position: center;
+}
+
+.car-card2 {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px black;
+    height: 165px;
+    width: 293px;
+    margin: 30px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    text-align: center;
+    color: black;
+
+    background-image: url("./images/car2.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.car-card3 {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px black;
+    height: 165px;
+    width: 293px;
+    margin: 30px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    text-align: center;
+    color: black;
+
+    background-image: url("./images/car3.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

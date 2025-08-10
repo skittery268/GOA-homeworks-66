@@ -1,0 +1,36 @@
+.car-card1 {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px rgb(69, 68, 68);
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 30px;
+
+    text-align: center;
+    color: deepskyblue;
+
+    background-image: url("./car1.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.car-card2 {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px rgb(69, 68, 68);
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 30px;
+
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+    background-image: url("./car2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
