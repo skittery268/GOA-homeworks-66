@@ -1,0 +1,25 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: x-large;
+}
+
+p {
+    margin: 5px;
+    color: white;
+    background-color: orange;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+p:hover {
+    background-color: red;
+    color: black;
+    transition: 0.3s;
+}
+
+p:active {
+    background-color: green;
+    color: red;
+    transition: 0.2s;
+}

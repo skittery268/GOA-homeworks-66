@@ -1,0 +1,53 @@
+div {
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+    box-shadow: 10px 10px 10px black;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-end {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.car1 {
+    background-image: url("./images/car1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.car2 {
+    background-image: url("./images/car2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.car3 {
+    background-image: url("./images/car3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.car4 {
+    background-image: url("./images/car4.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 25px;
+}
+
+.car5 {
+    background-image: url("./images/car5.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 25px;
+}
