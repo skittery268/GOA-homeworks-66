@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+
+    background: linear-gradient(to bottom, lightgreen, white)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.div-number-1 {
+    text-align: center;
+}
+
+.div-number-2 {
+    display: flex;
+    margin: 40px;
+}
+
+.div-number-2 h2 {
+    margin: 0px 20px 0px 20px;
+}
+
+#p {
+    box-sizing: border-box;
+    height: 50px;
+    width: 300px;
+
+    border: 1px solid rgb(62, 147, 62);
+    border-radius: 5px;
+    
+    background-color: rgb(62, 147, 62);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 625px;
+    bottom: 100px;
+}

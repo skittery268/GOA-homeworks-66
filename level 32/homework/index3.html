@@ -5,33 +5,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
     <title>Document</title>
-    <style>
-        nav {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-    </style>
 </head>
 <body>
-    <div>
+    <header>
         <h2 style="color: green;">GeeksForGeeks</h2>
         <nav>
-            <h3>Home              About              Services             Contact</h3>
+            <h2>
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Services">Services</a>
+                <a href="#Contact">Contact</a>
+            </h2>
         </nav>
-    </div>
-    <div style="background-color: green;">
-        <hr style="color: darkgreen; height: 3px; background-color: darkgreen;">
-        <h1 style="text-align: center;">About Us</h1>
-        <p style="text-align: center;">GeeksForGeeks is a leading platform...</p>
-        <br>
-        <br>
-        <br>
-        <div style="display: flex; flex-direction: row;">
-            <img src="image.jpg" height="250">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, modi laboriosam voluptatem tempore facilis facere cum in nam, quam impedit aspernatur soluta repellat sit mollitia esse ipsum nihil iure, unde error? Ea esse facilis culpa sint, pariatur reiciendis quisquam fuga aliquid reprehenderit omnis veritatis possimus nam. Suscipit ab aut qui molestias? Fuga quas aperiam, officiis tenetur hic nam est itaque blanditiis sint, impedit, cum ut. Ad, est provident quaerat quas laudantium deserunt tempora eius libero? Earum tempore deleniti velit vitae, minima, asperiores dolore officiis voluptas saepe amet quas blanditiis, repudiandae fugiat? Ex, beatae magnam. Impedit explicabo deserunt aliquid exercitationem debitis ut nesciunt dignissimos dolores ipsam quaerat in accusamus, esse repudiandae culpa, ipsum eum perspiciatis doloribus ullam tenetur amet omnis? Nam mollitia rem esse? Vero deserunt, consectetur suscipit voluptate itaque id ducimus cum laboriosam modi inventore accusamus, ratione, ab debitis! Reprehenderit ut veritatis earum aperiam alias iure nesciunt nulla illum et?</p>
+    </header>
+    <main>
+        <hr>
+        <div class="div-number-1">
+            <h1>About Us</h1>
+            <p>GeeksForGeeks is a leading platform...</p>
         </div>
-        <button>Read More...</button>
-    </div>
+        <div class="div-number-2">
+            <img src="image.jpg" height="350">
+            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, modi laboriosam voluptatem tempore facilis facere cum in nam, quam impedit aspernatur soluta repellat sit mollitia esse ipsum nihil iure, unde error? Ea esse facilis culpa sint, pariatur reiciendis quisquam fuga aliquid reprehenderit omnis veritatis possimus nam. Suscipit ab aut qui molestias? Fuga quas aperiam, officiis tenetur hic nam est itaque blanditiis sint, impedit, cum ut. Ad, est provident quaerat quas laudantium deserunt tempora eius libero? Earum tempore deleniti velit vitae, minima, asperiores dolore officiis voluptas saepe amet quas blanditiis, repudiandae fugiat? Ex, beatae magnam. Impedit explicabo deserunt aliquid exercitationem debitis ut nesciunt dignissimos dolores ipsam quaerat in accusamus, esse repudiandae culpa, ipsum eum perspiciatis doloribus ullam tenetur amet omnis? Nam mollitia rem esse? Vero deserunt, consectetur suscipit voluptate itaque id ducimus cum laboriosam modi inventore accusamus, ratione, ab debitis! Reprehenderit ut veritatis earum aperiam alias iure nesciunt nulla illum et?</h2>
+        </div>
+        <div id="p">Read More...</div>
+    </main>
 </body>
 </html>
