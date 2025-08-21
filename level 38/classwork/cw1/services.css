@@ -1,0 +1,17 @@
+body {
+    height: 100vh;
+
+    background: linear-gradient(to bottom, black, white);
+    color: red;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav h2 a {
+    margin: 15px;
+    color: red;
+    text-decoration: none;
+}

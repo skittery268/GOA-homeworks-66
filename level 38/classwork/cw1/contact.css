@@ -1,0 +1,34 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, red, white);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+div h1 {
+    margin: 0px 15px 0px 15px;
+}
+
+.h1 {
+    box-sizing: border-box;
+    height: 50px;
+    width: 400px;
+
+    position: relative;
+    left: 713px;
+    bottom: 187px;
+}

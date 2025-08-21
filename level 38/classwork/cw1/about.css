@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, green, white);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    height: 80vh;
+}
+
+nav h2 a {
+    margin: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    box-sizing: border-box;
+    height: 350px;
+    width: 500px;
+
+    position: absolute;
+    left: 900px;
+    bottom: 200px;
+}
