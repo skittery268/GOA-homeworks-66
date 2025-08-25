@@ -1,0 +1,109 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    box-sizing: border-box;
+    height: 110px;
+    width: 1060px;
+    box-shadow: 5px 5px 5px rgb(116, 116, 116);
+
+    background-color: #faebd7;
+
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inp {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 1px;
+    padding-right: 30px;
+}
+
+.email-inp {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 0px;
+}
+
+.drop {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 110px;
+}
+
+button {
+    background: none;
+    color: none;
+    border: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 37px;
+    padding-left: 37px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.h1 {
+    position: absolute;
+    bottom: 665px;
+    left: 246px;
+}
+
+.h2 {
+    position: absolute;
+    bottom: 665px;
+    left: 395px;
+}
+
+.h3 {
+    position: absolute;
+    bottom: 665px;
+    left: 545px;
+}
+
+.h4 {
+    position: absolute;
+    bottom: 665px;
+    left: 688px;
+}
+
+.h5 {
+    position: absolute;
+    bottom: 665px;
+    left: 833px;
+}
+
+.h6 {
+    position: absolute;
+    bottom: 665px;
+    left: 976px;
+}
+
+.h7 {
+    position: absolute;
+    bottom: 665px;
+    left: 1147px;
+}
+
+input {
+    background-color: #faebd7;
+    border: 1px solid black;
+}
+
+select {
+    background-color: #faebd7;
+    border: 1px solid black;
+}
