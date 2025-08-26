@@ -1,0 +1,43 @@
+table {
+    background-color: #01987a;
+    color: white;
+    border-collapse: collapse;
+    border-radius: 5px;
+    border-bottom: 2px solid #01987a;
+    font-family: "Gill Sans", sans-serif;
+}
+
+thead tr th {
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 100;
+}
+
+.th1 {
+    padding-left: 10px;
+}
+
+.number {
+    padding-left: 10px;
+}
+
+.tr td {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    margin: 0px;
+    font-weight: 100;
+}
+
+.tr2 td {
+    background-color: #f3f3f3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #01987a;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    margin: 0px;
+    font-weight: 100;
+}

@@ -60,42 +60,49 @@ button:hover {
     position: absolute;
     bottom: 665px;
     left: 246px;
+    font-weight: 100;
 }
 
 .h2 {
     position: absolute;
     bottom: 665px;
     left: 395px;
+    font-weight: 100;
 }
 
 .h3 {
     position: absolute;
     bottom: 665px;
     left: 545px;
+    font-weight: 100;
 }
 
 .h4 {
     position: absolute;
     bottom: 665px;
     left: 688px;
+    font-weight: 100;
 }
 
 .h5 {
     position: absolute;
     bottom: 665px;
     left: 833px;
+    font-weight: 100;
 }
 
 .h6 {
     position: absolute;
     bottom: 665px;
     left: 976px;
+    font-weight: 100;
 }
 
 .h7 {
     position: absolute;
     bottom: 665px;
     left: 1147px;
+    font-weight: 100;
 }
 
 input {
