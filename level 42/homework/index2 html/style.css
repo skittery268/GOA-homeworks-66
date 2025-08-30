@@ -1,0 +1,261 @@
+* {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #0D1A2D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    box-sizing: border-box;
+    height: 560px;
+    width: 350px;
+    background-color: #15273F;
+    box-shadow: 8px 8px 8px #0C1729;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    width: 100%;
+    height: 50%;
+    background-image: url("./images/image-equilibrium.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.image:hover {
+    background-image: url("./images/icon-view.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+h2 {
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h2:hover {
+    color: #3AD1CC;
+    cursor: pointer;
+}
+
+.h3 {
+    color: #7B8FAA;
+    margin-bottom: 25px;
+}
+
+.txt {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #49DEE5;
+}
+
+.h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #8CA8D4;
+}
+
+hr {
+    border: 1px solid #263850;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    height: 33px;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.p1 {
+    color: #758BA6;
+    margin-right: 6px;
+}
+
+.p2 {
+    color: #B2BDD0;
+}
+
+.p2:hover {
+    color: #3AD1CC;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    * {
+        margin: 0px;
+    }
+
+    body {
+        height: 100vh;
+        background-color: #0D1A2D;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        box-sizing: border-box;
+        height: 560px;
+        width: 350px;
+        background-color: #15273F;
+        box-shadow: 8px 8px 8px #0C1729;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        height: 90%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 50%;
+        background-image: url("./images/image-equilibrium.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 7px;
+    }
+
+    .image {
+        height: 100%;
+        width: 100%;
+        border-radius: 7px;
+    }
+
+    .image:hover {
+        background-image: url("./images/icon-view.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        background-color: hsl(178, 100%, 50%);
+        cursor: pointer;
+    }
+
+    h2 {
+        color: white;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    h2:hover {
+        color: #3AD1CC;
+        cursor: pointer;
+    }
+
+    .h3 {
+        color: #7B8FAA;
+        margin-bottom: 25px;
+    }
+
+    .txt {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    .h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: #49DEE5;
+    }
+
+    .h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: #8CA8D4;
+    }
+
+    hr {
+        border: 1px solid #263850;
+    }
+
+    .footer {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .avatar {
+        height: 33px;
+        border: 1px solid white;
+        border-radius: 100%;
+        margin-right: 15px;
+    }
+
+    .p1 {
+        color: #758BA6;
+        margin-right: 6px;
+    }
+
+    .p2 {
+        color: #B2BDD0;
+    }
+
+    .p2:hover {
+        color: #3AD1CC;
+        cursor: pointer;
+    }
+}
+
