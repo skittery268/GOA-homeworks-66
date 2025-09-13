@@ -1,0 +1,54 @@
+body {
+    background-color: #2B2C30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container {
+    height: 300px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading {
+    height: 30px;
+    width: 400px;
+    border: 2px solid #6E94A0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.background {
+    height: 76%;
+    width: 98%;
+    background-color: #06AD91;
+    border-radius: 50px;
+    animation-name: loading;
+    animation-duration: 10s;
+    position: absolute;
+    margin-left: 4px;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+    0% {
+        width: 1%;
+        left: 0;
+    }
+
+    70% {
+        width: 49%;
+    }
+
+    100% {
+        width: 98%;
+    }
+}
+

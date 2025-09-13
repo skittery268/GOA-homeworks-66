@@ -1,0 +1,31 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 130px;
+    width: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    height: 100px;
+}
+
+.messages {
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    color: white;
+}

@@ -1,0 +1,459 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-family: sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+    height: 600px;
+    width: 1150px;
+}
+
+.h1 {
+    width: 50%;
+    color: #501C54;
+}
+
+.p1 {
+    width: 80%;
+    color: grey;
+}
+
+.text-container {
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+}
+
+.txt {
+    height: 100%;
+    width: 50%;
+}
+
+.rates {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.star {
+    height: 20px;
+    width: 20px;
+    background-image: url("./images/icon-star.svg");
+    background-repeat: no-repeat;
+}
+
+.stars {
+    display: flex;
+}
+
+.rate1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    height: 15%;
+    width: 65%;
+    padding-right: 50px;
+    border-radius: 10px;
+
+    background-color: #F7F2F8;
+    font-size: 12px;
+    position: absolute;
+    top: 50px;
+    color: #501C54;
+}
+
+.rate2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    height: 15%;
+    width: 68%;
+    padding-right: 35px;
+    border-radius: 10px;
+
+    background-color: #F7F2F8;
+    font-size: 12px;
+    position: absolute;
+    top: 110px;
+    right: 110px;
+    color: #501C54;
+}
+
+.rate3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    height: 15%;
+    width: 65%;
+    padding-right: 50px;
+    border-radius: 10px;
+
+    background-color: #F7F2F8;
+    font-size: 12px;
+    position: absolute;
+    top: 170px;
+    right: 80px;
+    color: #501C54;
+}
+
+.card-container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+
+    position: relative;
+}
+
+.card1 {
+    height: 220px;
+    width: 350px;
+    background-color: #501C54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 100px;
+}
+
+.image1 {
+    height: 45px;
+    width: 45px;
+    background-image: url("./images/image-colton.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.card01 {
+    height: 90%;
+    width: 85%;
+    color: white;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top .card-text span {
+    color: #CD77AE;
+}
+
+.card2 {
+    height: 220px;
+    width: 350px;
+    background-color: #501C54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+    position: absolute;
+    bottom: 80px;
+    left: 380px;
+}
+
+.image2 {
+    height: 45px;
+    width: 45px;
+    background-image: url("./images/image-irene.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.card02 {
+    height: 90%;
+    width: 85%;
+    color: white;
+}
+
+.card3 {
+    height: 220px;
+    width: 350px;
+    background-color: #501C54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 60px;
+    right: 40px;
+}
+
+.card03 {
+    height: 90%;
+    width: 85%;
+    color: white;
+}
+
+.image3 {
+    height: 45px;
+    width: 45px;
+    background-image: url("./images/image-anne.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        font-family: sans-serif;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 1500px;
+        width: 300px;
+        margin: 0px;
+    }
+
+    .h1 {
+        width: 100%;
+        color: #501C54;
+    }
+
+    .p1 {
+        width: 100%;
+        color: grey;
+    }
+
+    .text-container {
+        height: 50%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .txt {
+        height: 43%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .rates {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+    }
+
+    .text {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+
+    .star {
+        height: 20px;
+        width: 20px;
+        background-image: url("./images/icon-star.svg");
+        background-repeat: no-repeat;
+    }
+
+    .stars {
+        display: flex;
+        margin-top: 20px;
+        padding: 0px;
+
+    }
+
+    .rate1 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        line-height: 0px;
+        height: 24%;
+        width: 100%;
+        padding: 0px;
+        border-radius: 10px;
+
+        background-color: #F7F2F8;
+        font-size: 12px;
+        position: absolute;
+        top: auto;
+        color: #501C54;
+    }
+
+    .rate2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        line-height: 0px;
+        height: 24%;
+        width: 100%;
+        padding-right: 0px;
+        border-radius: 10px;
+
+        background-color: #F7F2F8;
+        font-size: 12px;
+        position: absolute;
+        top: 100px;
+        right: inherit;
+        color: #501C54;
+    }
+
+    .rate3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        line-height: 0px;
+        height: 24%;
+        width: 100%;
+        padding: 0px;
+        border-radius: 10px;
+
+        background-color: #F7F2F8;
+        font-size: 12px;
+        position: absolute;
+        top: 200px;
+        right: inherit;
+        color: #501C54;
+    }
+
+    .card-container {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: static;
+    }
+
+    .card1 {
+        height: 220px;
+        width: 300px;
+        background-color: #501C54;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .image1 {
+        height: 35px;
+        width: 35px;
+        background-image: url("./images/image-colton.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+
+    .card01 {
+        height: 90%;
+        width: 85%;
+        color: white;
+        font-size: 15px;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .top .card-text span {
+        color: #CD77AE;
+    }
+
+    .card2 {
+        height: 220px;
+        width: 300px;
+        background-color: #501C54;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .image2 {
+        height: 35px;
+        width: 35px;
+        background-image: url("./images/image-irene.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+
+    .card02 {
+        height: 90%;
+        width: 85%;
+        color: white;
+        font-size: 15px;
+    }
+
+    .card3 {
+        height: 220px;
+        width: 300px;
+        background-color: #501C54;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .card03 {
+        height: 90%;
+        width: 85%;
+        color: white;
+        font-size: 15px;
+    }
+
+    .image3 {
+        height: 35px;
+        width: 35px;
+        background-image: url("./images/image-anne.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+}

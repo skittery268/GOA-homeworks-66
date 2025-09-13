@@ -1,0 +1,27 @@
+.container {
+    background-color: aqua;
+    height: 300px;
+    width: 300px;
+
+    position: relative;
+}
+
+.absolute {
+    background-color: red;
+    height: 150px;
+    width: 150px;
+
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+}
+
+section {
+    height: 500px;
+    width: 500px;
+}

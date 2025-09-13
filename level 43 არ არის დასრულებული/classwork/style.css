@@ -1,0 +1,123 @@
+/* 1) მოცემული კოდი ახსენით კომენტარების სახით */
+
+/* ვაიმპორტებთ სხვა font-family-ს */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* ყველა ელემენტის box-model-ს 0-ზე ვაყენებთ და უცვლით font-family-ს */
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+/* ამ ელემენტის სიგრძეს ვაყენებთ 100vh-ზე, ასევე ყველა ელემენტს ვაქცევთ ცენტრში და უკანა ფერს უცვლით */
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 43%, 93%);
+}
+
+/* მთავარ დივს უმრგვალებთ გვერდებს და ასევე ყველა ელემენტს რომელიც გამოდის ამ დივის გარეთ ვმალავთ */
+.mainDiv{
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* ამ დივს უცვლით უკანა ფერს, უყენებთ ზომას და შიდა დაშორებას უყენებთ 30 პიქსელზე */
+.firstDiv{
+    background-color: white;
+    height:200px;
+    padding: 30px;
+}
+
+/* ამ პარაგრაფს უცვლით ტექსტის ფერს, და ასევე უცვლით ზომას + ქვედა გარეთა დაშორებას 25 პიქსელზე უყენებთ */
+.paragraph1{
+    color:#26a8a6;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* ამ პარაგრაფს უცვლით ტექსტის ფერს და ასევე ქვედა გარეთა დაშორებას უყენებთ 15 პიქსელს */
+.paragraph2{
+    color:#BEDF31;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* ამ პარაგრაფს უცვლით ტექსტის ფერს */
+.paragraph3{
+    color:hsl(218, 22%, 67%);
+}
+
+/* ამ ელემენტში ვაყენებთ ელემენტებს გვერდი-გვერდ */
+.twoDivsTogether{
+    display: flex;
+    flex-direction: row;
+}
+
+/* ამ ელემენტის უკანა ფერს ვცვლით, ასევე შიდა დაშორებას უყენებთ 30 პიქსელზე და უცვლით ზომას */
+.first{
+    background-color: #2BB4B1;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 30px;
+    width:50%;
+}
+
+/* ამ პარაგრაფს უცვლით ტექსტის ფერს და ქვედა გარე დაშორებას უყენებთ 15 პიქსელზე */
+.paragraph4{
+    color:white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* ამ ელემენტის ტექსტის ფერს ვცვლით და ასევე ქვედა გარეთა დაშორებას უყენებთ 10 პიქსელზე */
+h2{
+    color:white;
+    margin-bottom: 10px;
+}
+
+/* აქ ტექსტს უცლით ზომას და ფერს */
+h2 span{
+    color:hsl(179, 61%, 52%);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* ამ ელემენტის ტექსტის ფერს ვცვლით, ასევე ქვედა გარეთა დაშორებას უყენებთ 25 პიქსელზე და უცვლით ზომას  */
+.paragraph5{
+    color:white;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ამ ღილაკს უცვლით უკანა ფერს, უშორებთ ზღვარს, უყენებთ ზომას, შიდა დაშრებას, უმრგვალებთ გვერდებს და უცვლით ტექსტის ფერს */
+button{
+    background-color: #BEDF31;
+    border:none;
+    width:100%;
+    padding: 13px;
+    border-radius: 5px;
+    color:white;
+    font-weight: 700;
+}
+
+/* ამ ელემენტს უცვლით უკანა ფერს, შიდა დაშორებას უყენებთ 30 პიქსელზე და უყენებთ ზომას */
+.second{
+    background-color: #49BEBD;
+    padding: 30px;
+    width:50%;
+}
+
+/* ამ ელემენტის ტექსტის ფერს უცვლით, ასევე უყენებთ ზომას და ქვედა გარეთა დაშორებას უყენებთ */
+.paragraph6{
+    color:hsl(204, 43%, 93%);
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+

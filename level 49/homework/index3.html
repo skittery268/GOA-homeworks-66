@@ -1,0 +1,34 @@
+<!-- 3) შექმენით ერთი ელემენტი რომლის border-radius - იქნება მთლიანად მომრგვალებული 50% და - hover - ებისას ეს ელემნტი უნდა გაიზარდოს და ამავდროულად გახდეს კვადრატი, ამისთვის უნდა გამოიყენოთ scale მნიშვენლობა  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        div:hover {
+            transform: scale(2);
+            border-radius: 0%;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

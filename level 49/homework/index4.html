@@ -1,0 +1,35 @@
+<!-- 4) შექმენით ერთი ელემენტი რომელიც შემობრუნდება საათის ისრის მიმართულებით 180 გრადუსით და - hover - ებისას, ამისთვის გამოიყენეთ rotate მნიშვნელობა -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div:hover {
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div>Hello world!</div>
+</body>
+</html>

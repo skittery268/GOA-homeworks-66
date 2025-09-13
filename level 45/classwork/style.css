@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(5, 70px);
+    grid-gap: 5px;
+}
+
+.main-content {
+    background-color: lightgreen;
+    grid-column: span 3;
+    grid-row: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sildebar {
+    background-color: blueviolet;
+    grid-row: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.twin {
+    background-color: orange;
+    grid-row: span 2;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

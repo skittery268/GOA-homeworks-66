@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    height: 90vh;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: #DFE8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgb(220, 220, 220);
+    border: none;
+
+    overflow: hidden;
+}
+
+.image {
+    height: 30%;
+    width: 100%;
+    background-image: url("./images/illustration-hero.svg");
+    background-position: center;
+    background-size: cover;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.p1 {
+    height: 50px;
+    width: 200px;
+    text-align: center;
+}
+
+p {
+    font-size: 11px;
+    color: grey;
+}
+
+img {
+    height: 30px;
+}
+
+.div {
+    height: 70px;
+    width: 250px;
+    background-color: #F8F9FE;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.h1 {
+    font-size: 10px;
+}
+
+.h2 {
+    font-size: 10px;
+    color: grey;
+    margin-top: 5px;
+}
+
+.div-div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 90px;
+    margin-left: 10px;
+}
+
+.l {
+    font-size: 10px;
+}
+
+.l:hover {
+    text-decoration: none;
+    color: #655eca;
+}
+
+button {
+    margin-top: 20px;
+    height: 40px;
+    width: 250px;
+    background-color: #382AE1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #766CF1;
+    cursor: pointer;
+}
+
+.last {
+    margin-top: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #787C97;
+}
+
+.last:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 375px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+
+    body {
+        height: 90vh;
+        background-image: url("./images/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+        background-color: #DFE8FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container {
+        height: 500px;
+        width: 300px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 8px 20px rgb(220, 220, 220);
+        border: none;
+
+        overflow: hidden;
+    }
+
+    .image {
+        height: 30%;
+        width: 100%;
+        background-image: url("./images/illustration-hero.svg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .p1 {
+        height: 50px;
+        width: 200px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 13px;
+        color: grey;
+    }
+
+    img {
+        height: 40px;
+    }
+
+    .div {
+        height: 70px;
+        width: 250px;
+        background-color: #F8F9FE;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .h1 {
+        font-size: 15px;
+    }
+
+    .h2 {
+        font-size: 15px;
+        color: grey;
+        margin-top: 5px;
+    }
+
+    .div-div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+        margin-left: 10px;
+    }
+
+    .l {
+        font-size: 15px;
+    }
+
+    .l:hover {
+        text-decoration: none;
+        color: #655eca;
+    }
+
+    button {
+        margin-top: 20px;
+        height: 40px;
+        width: 250px;
+        background-color: #382AE1;
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        background-color: #766CF1;
+        cursor: pointer;
+    }
+
+    .last {
+        margin-top: 20px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #787C97;
+    }
+
+    .last:hover {
+        color: black;
+        transition: 0.3s;
+    }
+}
+
