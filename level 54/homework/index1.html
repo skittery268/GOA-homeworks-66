@@ -1,0 +1,31 @@
+<!-- 1) შექმენით ერთი ღილაკი, Guess the secret number, ამ ღილაკს დაუმატეთ მოვლენის მსმენელი, მომხმარებელს შემოატანინეთ რაიმე რიცხვი იმ შემთხვევაში თუ მომხმარებლის მიერ შემოტანილი რიცხვი მეტია თქვენს ჩაფიქრებულ რიცხვზე alert - ის საშუალებით აცნობეთ რომ, Your number is too high, try again, იმ შემთხვევაში თუ მომხმარებლის მიერ შემოტანილი რიცხვი ნაკლებია თქვენს რიცხვზე alert - ის დახმარებით აცნობეთ, რომ Your number is too low try again, სხვა შემთხვევაში კი You have guessed the secret number -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Guess the secret number</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        const my_number = 10;
+
+        btn.addEventListener("click", () => {
+            const user_number = parseInt(prompt("Please enter your number"));
+
+            if(user_number > my_number) {
+                alert("Your number is too high, try again")
+            } else if(user_number < my_number) {
+                alert("Your number is too low try again")
+            } else {
+                alert("You have guessed the secret number")
+            }
+        })
+    </script>
+</body>
+</html>

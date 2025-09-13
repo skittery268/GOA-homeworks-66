@@ -1,0 +1,23 @@
+<!-- 3) შექმენით ერთი ცვლადი სადაც შეინახავთ password - ს, შექმენით ერთი ცვლადი სადაც მომხმარებელს შემოატანინებთ თავის პაროლს, შეამოწმეთ იმ შემთხვევაში თუ მომხმარებლის მიერ შემოტანილი პაროლი უდრის ცლადში შენახულ მნიშვნელობას, console log ში დაბეჭდეთ ან alert - ის გამოყენებით აცნობეთ რომ Passwords match სხვა შემთხვევაში კი Passwords are not equal  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const password = "1234";
+
+        const user_password = prompt("Please enter your password");
+
+        if(user_password == password) {
+            alert("Passwords match")
+        } else {
+            alert("Passwords are not equal")
+        }
+    </script>
+</body>
+</html>
