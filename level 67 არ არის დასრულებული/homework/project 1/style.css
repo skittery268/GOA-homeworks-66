@@ -1,0 +1,239 @@
+* {
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #C4E4E7;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.container {
+    width: 650px;
+    height: 320px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.input-container {
+    height: 90%;
+    width: 50%;
+}
+
+.container .input-container .input1 input {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3F8FB;
+    border: 1px solid #F3F8FB;
+    text-align: right;
+    width: 264px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.container .input-container .input1 input:hover {
+    border: 1px solid lightgreen;
+}
+
+.container .input-container .input1 {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container .input-container .input1 p {
+    color: #708483;
+    font-size: 10px;
+    font-family: serif;
+}
+
+.container .input-container .input1 img {
+    position: absolute;
+    top: 26px;
+    left: 10px;
+    height: 10px;
+}
+
+.container .input-container p {
+    color: #708483;
+    font-size: 12px;
+    font-family: serif;
+    margin-bottom: 5px;
+}
+
+.container .input-container .tip-procent {
+    height: 60px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.container .input-container .tip-procent button {
+    height: 30px;
+    width: 80px;
+    border: none;
+    background-color: #00474B;
+    color: white;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.container .input-container .tip-procent button:hover {
+    background-color: #9FE8E1;
+    color: #00474B;
+    cursor: pointer;
+}
+
+.container .input-container .tip-procent input {
+    height: 30px;
+    width: 80px;
+    border: none;
+    color: #00474B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F8FB;
+    border: 1px solid #F3F8FB;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.container .input-container .tip-procent input:hover {
+    border: 1px solid lightgreen;
+}
+
+.container .input-container .number-of-people {
+    position: relative;
+}
+
+.container .input-container .number-of-people {
+    color: #708483;
+    font-size: 10px;
+    font-family: serif;
+    margin-top: 50px;
+}
+
+.container .input-container .number-of-people input {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3F8FB;
+    border: 1px solid #F3F8FB;
+    text-align: right;
+    width: 264px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.container .input-container .number-of-people input:hover {
+    border: 1px solid lightgreen;
+}
+
+.container .input-container .number-of-people img {
+    position: absolute;
+    top: 28px;
+    left: 10px;
+    height: 10px;
+}
+
+.container .result-container {
+    height: 90%;
+    width: 44%;
+    background-color: #00474B;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .result-container .result {
+    height: 40%;
+    width: 80%;
+    margin-bottom: 70px;
+}
+
+.container .result-container .tip {
+    display: flex;
+    gap: 80px;
+}
+
+.container .result-container .tip p {
+    font-size: 10px;
+    width: 55px;
+    color: white;
+    line-height: 15px;
+}
+
+.container .result-container .tip p span {
+    color: rgb(177, 177, 177);
+}
+
+.container .result-container .tip h1 span {
+    font-size: 25px;
+}
+
+.container .result-container .tip h1 {
+    color: #24C3AC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .result-container .total {
+    display: flex;
+    gap: 85px;
+    margin-top: 20px;
+}
+
+.container .result-container .total p {
+    font-size: 10px;
+    width: 50px;
+    color: white;
+    line-height: 15px;
+}
+
+.container .result-container .total p span {
+    color: rgb(177, 177, 177);
+}
+
+.container .result-container .total h1 {
+    color: #24C3AC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .result-container .total h1 span {
+    font-size: 25px;
+}
+
+.container .result-container button {
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    background-color: #0D686D;
+    color: #065F63;
+}
+
+.container .result-container button:hover {
+    background-color: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
+}
