@@ -1,0 +1,23 @@
+<!-- 32) შექმენით ერთი ღილაკი რომელზე დაჭერისას ყოველ ჯერზე იქმნება ახალი ელემენტი უკანა ფერი უნდა ქონდეს წითელი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="btn">Click here to creat a new element</button>
+
+    <script>
+        const div = document.getElementById("container");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener('click', () => {
+            div.innerHTML += `<div style="background-color: red; height: 100px; width: 100px; margin: 10px"></div>`
+        })
+    </script>
+</body>
+</html>
