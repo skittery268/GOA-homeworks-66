@@ -1,0 +1,52 @@
+<!-- 
+1) შექმენით პროექტი, სადაც გექნებათ ერთი სექცია Add Car, იქნება ფორმა სადაც, მომხმარებელი შეიყვანს მანქანის მონაცემებს როგორიცაა make, model, year. 
+თქვენი დავალებაა რომ მომხმარებლის მიერ ჩაწერილი ინფორმაცია input - ებიდან წამოიღოთ და დაამატოთ cars მასივში 
+(cars მასივი თავიდან უნდა იყოს ცარიელი) ეს მასივი უნდა დაემატოს localStorage - ში (ლოკალურ ბაზაში), ინფორმაციის 
+დადასტურების შემდეგ უნდა შეიქმნას ერთი ცხრილი სადაც ჩაამტებთ მანქანის შესახებ მონაცემებს თითოეულ მანქანას უნდა მიენიჭოს 
+უნიკალური ID, უნდა გქონდეთ delete Car ღილაკი რომელზე დაჭერისას ცხრილიდან და ლოკალური ბაზიდან უნდა წაიშალოს მანქანა, 
+ეს გააკეთეთ class - ების გამოყენებით + დაუმატეთ გასტილვა 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="top">
+            <button id="btn1">Add Car</button>
+            <button id="btn2">Delete Car</button>
+        </div>
+        <table border="1" id="table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <form id="add">
+        <input type="text" name="make" placeholder="Make">
+        <input type="text" name="model" placeholder="Model">
+        <input type="number" name="year" placeholder="Year">
+        <button type="submit" id="submit">Add</button>
+    </form>
+
+    <form id="remove">
+        <input type="text" name="number" placeholder="Chose Car Number To Delite">
+        <button type="submit" id="submit">Remove</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
