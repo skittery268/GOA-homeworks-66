@@ -40,7 +40,6 @@ class Car {
     }
 }
 
-// 🔹 Функция для рендера таблицы
 function renderTable() {
     const cars = Car.getCarsFromStorage();
     table.innerHTML = "";
@@ -56,7 +55,6 @@ function renderTable() {
     });
 }
 
-// При загрузке страницы — сразу показываем все машины
 window.addEventListener("DOMContentLoaded", renderTable);
 
 addFormInputs.addEventListener('submit', (e) => {
@@ -67,7 +65,7 @@ addFormInputs.addEventListener('submit', (e) => {
     const year = addFormInputs.year.value.trim();
 
     let cars = Car.getCarsFromStorage();
-    const number = cars.length + 1; // уникальный id по счёту
+    const number = cars.length + 1;
 
     const newCar = new Car(number, make, model, year);
     Car.addCarToStorage(newCar);
@@ -86,10 +84,8 @@ removeFormInputs.addEventListener('submit', (e) => {
 
     let cars = Car.getCarsFromStorage();
 
-    // удаляем по номеру
     cars = cars.filter(obj => obj.number != number);
 
-    // перенумерация
     cars.forEach((car, i) => car.number = i + 1);
 
     Car.saveCars(cars);
