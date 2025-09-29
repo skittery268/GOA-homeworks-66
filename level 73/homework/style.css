@@ -1,0 +1,121 @@
+body {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.header {
+    background-color: rgb(128, 55, 128);
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav button {
+    height: 40px;
+    width: 200px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+nav button:hover {
+    background-color: white;
+    color: blue;
+}
+
+main #container-reg form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 198, 209);
+    height: 350px;
+    width: 250px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+#container-reg {
+    display: none;
+}
+
+main #container-reg form input {
+    border: none;
+    border-bottom: 2px solid grey;
+    height: 30px;
+    width: 150px;
+    padding: 10px;
+    background-color: inherit;
+    color: white;
+}
+
+main #container-reg form button {
+    height: 40px;
+    width: 200px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+main #container-reg form button:hover {
+    background-color: white;
+    color: blue;
+}
+
+main #container-auth form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 198, 209);
+    height: 350px;
+    width: 250px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+#container-auth {
+    display: none;
+}
+
+main #container-auth form input {
+    border: none;
+    border-bottom: 2px solid grey;
+    height: 30px;
+    width: 150px;
+    padding: 10px;
+    background-color: inherit;
+    color: white;
+}
+
+main #container-auth form button {
+    height: 40px;
+    width: 200px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+main #container-auth form button:hover {
+    background-color: white;
+    color: blue;
+}
+

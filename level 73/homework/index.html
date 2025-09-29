@@ -1,0 +1,48 @@
+<!-- 
+7) შექმენით პროექტი, სადაც მომხმარებელს შეეძლება ავტორიზაციის გავლა და რეგისტრაცია, საიტზე უნდა გქონდეთ ორი სექცია პირველი 
+Registration მეორე Authorization, Registration - ის სექციაში უნდა გქონდეთ input - ები (email, fullname, password) თქვენი დავალებაა 
+რომ ეს ინფორმაცია წამოიღოთ input - თეგებიდან და დაამატოთ users - მასივში, Authorization - ის სექციაში უნდა ქონდეს ორი input - ი 
+email, password, წამოიღეთ ინფორმაცია input თეგებიდან და შემოწმეთ თუ მომხმარებლის მიერ შემოტანილი ინფორმაცია authorization 
+სექციაში უდრის registration სექციაში შეტანილ ინფორმაციას alert - ის საშუალებით გამოუტანეთ 'You have logged in successfully', 
+სხვა შემთხვევაში კი 'Your login information is incorrect', თუ მომხმარებელი დარეგისტრირდა ერთი და იგივე email - ით გამოიტანეთ 
+'The email already registered', დარეგისტრირებული მომხმარებელის ინფორმაცია გამოიტანეთ საიტზე 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <button id="reg">Registration</button>
+            <button id="auth">Authorization</button>
+        </nav>
+    </div>
+
+    <main>
+        <div id="container-reg">
+            <form id="form1">
+                <input type="email" name="email1" id="inp1" placeholder="Email">
+                <input type="text" name="fullName" id="inp2" placeholder="Full Name">
+                <input type="password" name="pass1" id="inp3" placeholder="Password">
+                <button>Submit</button>
+            </form>
+        </div>
+        <div id="container-auth">
+            <form id="form2">
+                <p style="color: white;">Authorization</p>
+                <hr style="width: 90%; padding: 0px; margin: 0px;">
+                <input type="email" name="email2" id="inp4" placeholder="Email">
+                <input type="password" name="pass2" id="inp5" placeholder="Password">
+                <button>Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="script4.js"></script>
+</body>
+</html>
