@@ -1,0 +1,30 @@
+<!-- 
+2) მოიძიეთ ინფორმაცია import/export შესახებ, გააკეთეთ 5-5 მაგალითი require და module, დააინტალირეთ გარე მოდულებიც და შემქენით თქვენი 
+მოდულებიც, პატარა პრეეზენტაციაც გამიკეთეთ რა განსხვავებაა ამ ორს შორის 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="module">
+        // module - ის მაგალითი
+        import { difference, greet, message, multiple, sum } from "./module.example.js";
+
+        console.log(difference(10, 5));
+
+        console.log(greet("Saba"));
+
+        console.log(message("Saba", 16));
+
+        console.log(multiple(10, 3));
+
+        console.log(sum(10, 5));
+    </script>
+</body>
+</html>
