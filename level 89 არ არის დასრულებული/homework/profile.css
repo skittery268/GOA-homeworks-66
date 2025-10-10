@@ -1,0 +1,304 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right, #3B65CC, #7E4E92);
+    height: 90vh;
+    position: relative;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+}
+
+header nav {
+    width: 97%;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul li button {
+    background-color: #f0f0f0;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    font-size: 11px;
+}
+
+header nav ul li button:hover {
+    background-color: black;
+    color: #f0f0f0;
+    transition: 0.3s;
+}
+
+header nav ul li a {
+    background-color: #f0f0f0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 60px;
+    padding-left: 60px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul li a:hover {
+    background-color: black;
+    color: #f0f0f0;
+    transition: 0.3s;
+}
+
+header nav ul li button {
+    background-color: #f0f0f0;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+}
+
+header nav ul li button:hover {
+    background-color: black;
+    color: #f0f0f0;
+    transition: 0.3s;
+}
+
+#admin-panel-button {
+    display: none;
+}
+
+#recipes-button {
+    display: none;
+}
+
+/* Register Form */
+#register {
+    box-sizing: border-box;
+    height: 450px;
+    width: 320px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: none;
+}
+
+input {
+    height: 10px;
+    width: 230px;
+    border: none;
+    border-bottom: 1px solid rgb(149, 149, 149);
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input1 {
+    margin-top: 30px;
+}
+
+hr {
+    height: 0.1px;
+    width: 300px;
+    background-color: black;
+}
+
+.submit-button {
+    background-color: #f0f0f0;
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit-button:hover {
+    background-color: black;
+    color: #f0f0f0;
+    transition: 0.3s;
+}
+
+/* Authorization Form */
+#authorization {
+    box-sizing: border-box;
+    height: 320px;
+    width: 320px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: none;
+}
+
+input {
+    height: 10px;
+    width: 230px;
+    border: none;
+    border-bottom: 1px solid rgb(149, 149, 149);
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input1 {
+    margin-top: 30px;
+}
+
+hr {
+    height: 0.1px;
+    width: 300px;
+    background-color: black;
+}
+
+.submit-button {
+    background-color: #f0f0f0;
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit-button:hover {
+    background-color: black;
+    color: #f0f0f0;
+    transition: 0.3s;
+}
+
+/* Profile */
+#profile {
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+
+.image {
+    background-image: url("profile-image.webp");
+    background-position: center;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.profile .account {
+    height: 25%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .account h2 {
+    color: rgb(103, 103, 103);
+
+}
+
+.profile .account h2 span {
+    font-size: 12px
+}
+
+.profile .account h3 {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: grey;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+}
+
+#user-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-profile {
+    height: 70%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.edit-user {
+    height: 15%;
+    width: 90%;
+    background-color: rgb(185, 185, 185);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.edit-profile .edit-user button {
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-profile .edit-user button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
