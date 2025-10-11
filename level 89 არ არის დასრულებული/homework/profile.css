@@ -89,7 +89,11 @@ header nav ul li button:hover {
     display: none;
 }
 
-#recipes-button {
+#game-button {
+    display: none;
+}
+
+#exit-button {
     display: none;
 }
 
@@ -222,7 +226,7 @@ hr {
     border-radius: 50%;
 }
 
-.profile .account {
+#profile .account {
     height: 25%;
     width: 100%;
     background-color: white;
@@ -234,16 +238,16 @@ hr {
     align-items: center;
 }
 
-.profile .account h2 {
+#profile .account h2 {
     color: rgb(103, 103, 103);
 
 }
 
-.profile .account h2 span {
+#profile .account h2 span {
     font-size: 12px
 }
 
-.profile .account h3 {
+#profile .account h3 {
     position: absolute;
     right: 10px;
     top: 0px;

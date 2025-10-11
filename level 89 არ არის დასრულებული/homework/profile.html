@@ -13,9 +13,9 @@
             <ul>
                 <li id="register-button"><button>Register</button></li>
                 <li id="login-button"><button>Login</button></li>
-                <li style="display: none;"><button>Exit</button></li>
+                <li id="exit-button"><button>Exit</button></li>
                 <li id="admin-panel-button"><a href="#">Admin Panel</a></li>
-                <li id="recipes-button"><a href="#">Recipes</a></li>
+                <li id="game-button"><a href="#">Game</a></li>
             </ul>
         </nav>
     </header>
@@ -25,14 +25,14 @@
         <div id="register">
             <h2 class="h1">Register</h2>
             <hr>
-            <form>
-                <input type="text" name="user-name" placeholder="Name" class="input1">
+            <form id="register-form">
+                <input type="text" name="userName" placeholder="Full Name" class="input1" required>
                 <br>
-                <input type="email" name="user-email" placeholder="Email">
+                <input type="email" name="userEmail" placeholder="Email" required>
                 <br>
-                <input type="password" name="user-password" placeholder="Password">
+                <input type="password" name="userPassword" placeholder="Password" required>
                 <br>
-                <input type="password" name="user-password-again" placeholder="Confirm Password">
+                <input type="password" name="userPasswordAgain" placeholder="Confirm Password" required>
                 <br>
 
                 <button type="submit" class="submit-button">Sign Up</button>
@@ -43,10 +43,10 @@
         <div id="authorization">
             <h2>Login</h2>
             <hr>
-            <form>
-                <input type="email" name="user-email" placeholder="Email" class="input1">
+            <form id="authorization-form">
+                <input type="email" name="userEmail" placeholder="Email" class="input1" required>
                 <br>
-                <input type="password" name="user-password" placeholder="Password">
+                <input type="password" name="userPassword" placeholder="Password" required>
                 <br>
 
                 <button type="submit" class="submit-button">Login</button>
