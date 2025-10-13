@@ -218,7 +218,7 @@ hr {
 }
 
 .image {
-    background-image: url("profile-image.webp");
+    background-image: url("./images/profile-image.webp");
     background-position: center;
     background-size: cover;
     height: 60px;
@@ -305,4 +305,21 @@ hr {
     background-color: black;
     color: white;
     transition: 0.3s;
+}
+
+#deleteAccount {
+    background-color: #f0f0f0;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid black;
+    font-size: 11px;
+}
+
+#deleteAccount:hover {
+    background-color: red;
+    transition: 0.3s;
+    color: white;
 }
