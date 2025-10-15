@@ -252,6 +252,20 @@ hr {
     color: grey;
 }
 
+#profile .account #balance {
+    position: absolute;
+    bottom: 0px;
+    right: 200px;
+    color: grey;
+}
+
+#profile .account h4 {
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    color: grey;
+}
+
 .left {
     display: flex;
     align-items: center;
@@ -281,12 +295,20 @@ hr {
 .edit-user {
     height: 15%;
     width: 90%;
-    background-color: rgb(185, 185, 185);
+    background: linear-gradient(to right, #667eea, #764ba2);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
+}
+
+.edit-user h3 {
+    margin-left: 10px;
+}
+
+.edit-user button {
+    margin-right: 10px;
 }
 
 .edit-profile .edit-user button {
@@ -320,4 +342,25 @@ hr {
     background-color: red;
     transition: 0.3s;
     color: white;
+}
+
+#green {
+    height: 15px;
+    width: 15px;
+    background-color: lightgreen;
+    border-radius: 50%;
+}
+
+#red {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
 }

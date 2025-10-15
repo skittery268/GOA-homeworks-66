@@ -3,6 +3,7 @@ const loginButton = document.getElementById("login-button");
 const registerButton = document.getElementById("register-button");
 const exitButton = document.getElementById("exit-button");
 const gameButton = document.getElementById("game-button");
+const adminPanelButton = document.getElementById("admin-panel-button");
 
 // Sections
 const registerDiv = document.getElementById("register");
@@ -39,6 +40,7 @@ exitButton.addEventListener('click', () => {
     profileDiv.style.display = "none";
     exitButton.style.display = "none";
     gameButton.style.display = "none";
+    adminPanelButton.style.display = "none";
     loginButton.style.display = "flex";
     registerButton.style.display = "flex";
 })
@@ -73,7 +75,9 @@ const renderProfile = (obj) => {
                 <div class="image"></div>
                 <h2 id="user-name">${obj.userName} <span id="user-email">${obj.email}</span></h2>
             </div>
-            <h3 id="status">${obj.status}</h3>
+            <h4 id="balance">Balance: ${obj.balance} | </h4>
+            <h4>Passive Income: ${obj.passiveIncome}</h4>
+            <h3 id="status"> ${obj.status === "Member" ? `<div id="green"></div>` : `<div id="red"></div>`} ${obj.status}</h3>
         </div>
         <div class="edit-profile">
             <div class="edit-user">
@@ -94,6 +98,14 @@ const renderProfile = (obj) => {
             <button id="deleteAccount">Delete Account</button>
         </div>
     `
+
+    const profile = JSON.parse(localStorage.getItem("thisAccount"));
+
+    if (profile.account.status === "Administrator") {
+        adminPanelButton.style.display = "flex";
+    } else {
+        adminPanelButton.style.display = "none";
+    }
 
     const deleteAccount = document.getElementById("deleteAccount");
     const editName = document.getElementById("editName");
@@ -127,7 +139,9 @@ const renderProfile = (obj) => {
 
     editName.addEventListener('click', () => {
         const newName = prompt("Please enter new user name.");
-        if (newName !== "") {
+        if (newName === null) {
+            console.log("Name is empty");
+        } else if (newName !== "") {
             editInfoFromLocalStorage(thisAccount.account, "userName", newName);
             const thisAcc = JSON.parse(localStorage.getItem("thisAccount"));
             renderProfile(thisAcc.account);
@@ -192,7 +206,7 @@ if (localStorage.getItem("lastId") === null) {
 }
 
 class Account {
-    constructor(id, userName, email, password, balance, passiveIncome, status) {
+    constructor(id, userName, email, password, balance, passiveIncome, status, lemonadeStandCount, techStoreCount, pizzaShopCount, taxiCompanyCount, shoppingMallCount) {
         this.id = id;
         this.userName = userName;
         this.email = email;
@@ -200,12 +214,31 @@ class Account {
         this.balance = balance;
         this.passiveIncome = passiveIncome;
         this.status = status;
+        this.lemonadeStandCount = lemonadeStandCount;
+        this.techStoreCount = techStoreCount;
+        this.pizzaShopCount = pizzaShopCount;
+        this.taxiCompanyCount = taxiCompanyCount;
+        this.shoppingMallCount = shoppingMallCount;
     }
+}
+
+const profile = getFromLocalStorage("thisAccount");
+
+if (profile.account.status === "Administrator") {
+    adminPanelButton.style.display = "flex";
+} else {
+    adminPanelButton.style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     if (getFromLocalStorage("isLoggedIn")) {
-        const profile = getFromLocalStorage("thisAccount");
+        const profile = JSON.parse(localStorage.getItem("thisAccount"));
+
+        if (profile.account.status === "Administrator") {
+            adminPanelButton.style.display = "flex";
+        } else {
+            adminPanelButton.style.display = "none";
+        }
         
         loginButton.style.display = "none";
         registerButton.style.display = "none";
@@ -242,7 +275,7 @@ regForm.addEventListener('submit', (e) => {
         if (ind) {
             let id = localStorage.getItem("lastId");
             id++;
-            const newAccount = new Account(id, name, email, password, 0, 0, "Member");
+            const newAccount = new Account(id, name, email, password, 0, 0, "Member", 0, 0, 0, 0, 0);
             localStorage.setItem("lastId", id);
 
             accounts.push(newAccount);
@@ -271,7 +304,7 @@ regForm.addEventListener('submit', (e) => {
     } else {
         let id = localStorage.getItem("lastId");
         id++;
-        const newAccount = new Account(id, name, email, password, 0, 0, "Member");
+        const newAccount = new Account(id, name, email, password, 0, 0, "Member", 0, 0, 0, 0, 0);
         localStorage.setItem("lastId", id);
 
         accounts.push(newAccount);
@@ -318,6 +351,14 @@ authForm.addEventListener('submit', (e) => {
         isLoggedIn = true;
         localStorage.setItem("isLoggedIn", isLoggedIn);
 
+        const profile = JSON.parse(localStorage.getItem("thisAccount"));
+
+        if (profile.account.status === "Administrator") {
+            adminPanelButton.style.display = "flex";
+        } else {
+            adminPanelButton.style.display = "none";
+        }
+
         loginButton.style.display = "none";
         registerButton.style.display = "none";
         authorDiv.style.display = "none";
@@ -331,3 +372,19 @@ authForm.addEventListener('submit', (e) => {
         alert("You entered an incorrect password or email.");
     }
 })
+
+const thisAccount = JSON.parse(localStorage.getItem("thisAccount"));
+
+if (thisAccount.account.passiveIncome > 0) {
+    setInterval(() => {
+        const thisAccount = JSON.parse(localStorage.getItem("thisAccount"));
+
+        thisAccount.account.balance += thisAccount.account.passiveIncome;
+
+        const balance = document.getElementById("balance");
+
+        balance.textContent = `Balance: ${thisAccount.account.balance} | `
+
+        localStorage.setItem("thisAccount", JSON.stringify(thisAccount));
+    }, 1000);
+}
