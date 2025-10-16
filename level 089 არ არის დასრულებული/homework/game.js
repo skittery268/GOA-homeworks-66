@@ -180,7 +180,7 @@ const renderMain = () => {
                 setFromLocalStorage("thisAccount", thisAccount);
                 }
         } else {
-            alert("The Lemonade Stand business limit has been exceeded.");
+            alert("The Pizza Shop business limit has been exceeded.");
         }
     })
 
@@ -203,7 +203,7 @@ const renderMain = () => {
                 setFromLocalStorage("thisAccount", thisAccount);
                 }
         } else {
-            alert("The Lemonade Stand business limit has been exceeded.");
+            alert("The Taxi Company business limit has been exceeded.");
         }
     })
 
@@ -226,7 +226,7 @@ const renderMain = () => {
                 setFromLocalStorage("thisAccount", thisAccount);
                 }
         } else {
-            alert("The Lemonade Stand business limit has been exceeded.");
+            alert("The Shopping Mall business limit has been exceeded.");
         }
     })
 }
