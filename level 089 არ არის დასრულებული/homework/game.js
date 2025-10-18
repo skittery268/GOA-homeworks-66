@@ -7,6 +7,7 @@ const setFromLocalStorage = (key, value) => {
 }
 
 const main = document.getElementById("main");
+const adminPanelButton = document.getElementById("admin-panel-button");
 
 const renderMain = () => {
     const thisAccount = getFromLocalStorage("thisAccount");
@@ -231,9 +232,26 @@ const renderMain = () => {
     })
 }
 
+const updateUserInfo = () => {
+    const thisAccount = getFromLocalStorage("thisAccount");
+
+    const balance = document.getElementById("balance");
+    const passiveIncome = document.getElementById("passiveIncome");
+
+    if (balance && passiveIncome) {
+        balance.textContent = `Balance: ${thisAccount.account.balance}`;
+        passiveIncome.textContent = `Passive Income: ${thisAccount.account.passiveIncome}`;
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     if (getFromLocalStorage("isLoggedIn") === true) {
         renderMain();
+
+        if (getFromLocalStorage("thisAccount").account.status === "Administrator") {
+            adminPanelButton.style.display = "flex";
+        }
     }
 })
 
@@ -262,7 +280,7 @@ if (thisAccount.account.passiveIncome > 0) {
         newAccounts.push(thisAccount.account);
 
         setFromLocalStorage("accounts", newAccounts);
-        renderMain()
+        updateUserInfo()
     }, 1000)
 }
 

@@ -1,3 +1,432 @@
 body {
     background: linear-gradient(to right, #3B65CC, #7E4E92);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    width: 97%;
+}
+
+header nav {
+    width: 97%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+}
+
+#selectAccount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    gap: 10px;
+    z-index: 200;
+}
+
+#selectAccountText {
+    height: 40px;
+    width: 170px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 201;
+}
+
+#selectAccountText:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+#selectAccountText:active {
+    background-color: white;
+    color: black;
+}
+
+#selectAccountOptions {
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 170px;
+    z-index: 100;
+    display: none;
+    overflow: scroll;
+    animation: OptionAnim 0.25s;
+}
+
+@keyframes OptionsAnim {
+    to {
+        opacity: 0;
+        transform: translateY(-5deg);
+    }
+    from {
+        opacity: 1;
+        transform: translateY(0deg);
+    }
+}
+
+#selectAccountOptions::-webkit-scrollbar {
+    display: none;
+}
+
+.option {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.option:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+header nav ul li a {
+    background-color: #f0f0f0;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+header nav ul li a:hover {
+    background-color: black;
+    color: #f0f0f0;
+    transition: 0.3s;
+}
+
+.image {
+    height: 20px;
+    width: 20px;
+    background-image: url("./images/profile-image.webp");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    display: none;
+}
+
+/* Profile */
+#profile {
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image1 {
+    background-image: url("./images/profile-image.webp");
+    background-position: center;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+#profile .account {
+    height: 25%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile .account h2 {
+    color: rgb(103, 103, 103);
+}
+
+#profile .account h2 span {
+    font-size: 12px
+}
+
+#profile .account h3 {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: grey;
+}
+
+#profile .account #balance {
+    position: absolute;
+    bottom: 0px;
+    right: 200px;
+    color: grey;
+}
+
+#profile .account h4 {
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    color: grey;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+}
+
+#user-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-profile {
+    height: 70%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.edit-user {
+    height: 15%;
+    width: 90%;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.edit-user h3 {
+    margin-left: 10px;
+}
+
+#green {
+    height: 15px;
+    width: 15px;
+    background-color: lightgreen;
+    border-radius: 50%;
+}
+
+#red {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+#adminPanel {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chooseActionPlatform {
+    background-color: white;
+    height: 25%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectAction {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 200;
+    position: relative;
+}
+
+#selectActionText {
+    height: 40px;
+    width: 170px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 201;
+}
+
+#selectActionText:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+#selectActionText:active {
+    background-color: black;
+    color: white;
+}
+
+#selectActionOptions {
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 170px;
+    z-index: 100;
+    border: 1px solid black;
+    overflow: scroll;
+    position: absolute;
+    top: 50px;
+    display: none;
+    animation: optionName 0.25s;
+}
+
+@keyframes optionName {
+    to {
+        opacity: 0;
+        transform: translateY(-5deg);
+    }
+    from {
+        opacity: 1;
+        transform: translateY(0deg);
+    }
+}
+
+#selectActionOptions::-webkit-scrollbar {
+    display: none;
+}
+
+.option1 {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.option1:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+#forms {
+    height: 70%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.form {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    background-color: rgb(234, 234, 234);
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px black;
+    display: none;
+}
+
+.form input {
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: inherit;
+    border-bottom: 1px solid grey;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form button {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 65px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.form button:active {
+    background-color: white;
+    color: black;
+    transition: 0s;
 }

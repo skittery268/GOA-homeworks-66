@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin-panel.css">
-    <title>Document</title>
+    <title>Admin Panel Page</title>
 </head>
 <body>
-    
+    <div id="selectAccount">
+        <div id="selectAccountText">Choose Account</div>
+        <div id="selectAccountOptions">
+            
+        </div>
+    </div>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li id="game-button"><a href="game.html">Game</a></li>
+                <li><a href="profile.html"><div class="image"></div> Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div id="profile">
+            <div class="account">
+                <div class="left">
+                    <div class="image1"></div>
+                    <h2 id="user-name">Saba Dzidzikashvili <span id="user-email">sabadzidzikashvili6@gmail.com</span></h2>
+                </div>
+                <h4 id="balance">Balance: 0</h4>
+                <h4>Passive Income: 0</h4>
+                <h3 id="status">Member</h3>
+            </div>
+            <div class="edit-profile">
+                <div class="edit-user">
+                    <h3>User name: undefind</h3>
+                </div>
+
+                <div class="edit-user">
+                    <h3>User email: undefind</h3>
+                </div>
+
+                <div class="edit-user">
+                    <h3>User password: undefind</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div id="adminPanel">
+            <div id="chooseActionPlatform">
+                <div id="selectAction">
+                    <div id="selectActionText">Choose Action</div>
+                    <div id="selectActionOptions">
+                        <div class="option1" value="balance">Balance</div>
+                        <div class="option1" value="userName">User Name</div>
+                        <div class="option1" value="lemonadeStand">Lemonade Stand</div>
+                        <div class="option1" value="techStore">Tech Store</div>
+                        <div class="option1" value="pizzaShop">Pizza Shop</div>
+                        <div class="option1" value="taxiCompany">Taxi Company</div>
+                        <div class="option1" value="shoppingMall">Shopping Mall</div>
+                    </div>
+                </div>
+            </div>
+            <div id="forms">
+                <form class="form" id="balanceForm">
+                    <h2 style="margin: 0px; padding: 0px;">Balance</h2>
+                    <input type="number" name="balance" placeholder="Enter new balance">
+                    <button type="submit">Accept</button>
+                </form>
+
+                <form class="form" id="lemonadeStand">
+                    <h2 style="margin: 0px; padding: 0px;">Lemonade Stand Buizness</h2>
+                    <input type="number" name="lemonadeStand" placeholder="Enter new Lemonade Stand Count">
+                    <button type="submit">Accept</button>
+                </form>
+
+                <form class="form" id="techStore">
+                    <h2 style="margin: 0px; padding: 0px;">Tech Store Buizness</h2>
+                    <input type="number" name="techStore" placeholder="Enter new Tech Store Count">
+                    <button type="submit">Accept</button>
+                </form>
+
+                <form class="form" id="pizzaShop">
+                    <h2 style="margin: 0px; padding: 0px;">Pizza Shop Buizness</h2>
+                    <input type="number" name="pizzaShop" placeholder="Enter new Pizza Shop Count">
+                    <button type="submit">Accept</button>
+                </form>
+
+                <form class="form" id="taxiCompany">
+                    <h2 style="margin: 0px; padding: 0px;">Taxi Company Buizness</h2>
+                    <input type="number" name="taxiCompany" placeholder="Enter new Taxi Company Count">
+                    <button type="submit">Accept</button>
+                </form>
+
+                <form class="form" id="shoppingMall">
+                    <h2 style="margin: 0px; padding: 0px;">Shopping Mall Buizness</h2>
+                    <input type="number" name="shoppingMall" placeholder="Enter new Shopping Mall Count">
+                    <button type="submit">Accept</button>
+                </form>
+
+                <form class="form" id="userName">
+                    <h2 style="margin: 0px; padding: 0px;">User Name</h2>
+                    <input type="text" name="userName" placeholder="Enter new User Name">
+                    <button type="submit">Accept</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
     <script src="admin-panel.js"></script>
 </body>
 </html>
