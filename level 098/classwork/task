@@ -1,0 +1,7 @@
+; 1) გაამარტივეთ ეს კოდი და დაყავით 3 კომპონენტად, Product list, Cart და Checkout კომპონენტები, გადაიტანეთ ფუნქციები შესაბამის კომპონენტებში საბოლოოდ კი გააერთიანეთ
+
+; 2) მოიძიეთ ინფორმაცია javascript closure შესახები მინიშნება (ფუნქციის ზურგჩანთა)
+
+; Done
+
+; 3)  https://www.hackerrank.com/challenges/react-word-omitter/problem?isFullScreen=true
