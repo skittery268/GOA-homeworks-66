@@ -1,0 +1,14 @@
+; 1) დღევანდელ გაკვეთილზე განხილული git command - ებზე გააკეთეთ რამოდენიმე მაგალითი
+; git init
+; git add filename or .
+; git diff
+; git commit -m "Message"
+; git log
+; git status
+; reset, show, checkout
+
+; კარგად გაიაზრეთ მოცემული ბრძანებები
+
+; 2) თქვენი დავალებაა რომ მოცემული პროექტი გააკეთოთ, გასტილვა უნდა იყოს Tailwind css - ით
+; https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6
+
