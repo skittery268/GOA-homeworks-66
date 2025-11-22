@@ -1,0 +1,72 @@
+[
+  {
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2022,
+    "color": "Silver",
+    "electric": false
+  },
+  {
+    "make": "Tesla",
+    "model": "Model 3",
+    "year": 2023,
+    "color": "Red",
+    "electric": true
+  },
+  {
+    "make": "Ford",
+    "model": "Mustang",
+    "year": 2021,
+    "color": "Blue",
+    "electric": false
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "year": 2022,
+    "color": "White",
+    "electric": true
+  },
+  {
+    "make": "BMW",
+    "model": "X5",
+    "year": 2023,
+    "color": "Black",
+    "electric": false
+  },
+  {
+    "make": "Audi",
+    "model": "e-tron",
+    "year": 2022,
+    "color": "Gray",
+    "electric": true
+  },
+  {
+    "make": "Hyundai",
+    "model": "Ioniq 5",
+    "year": 2023,
+    "color": "Green",
+    "electric": true
+  },
+  {
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2021,
+    "color": "Orange",
+    "electric": false
+  },
+  {
+    "make": "Kia",
+    "model": "EV6",
+    "year": 2023,
+    "color": "Blue",
+    "electric": true
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Golf",
+    "year": 2022,
+    "color": "Yellow",
+    "electric": false
+  }
+]
