@@ -5,7 +5,7 @@ const Search_car = () => {
     const [open, setOpen] = useState(false);
     return (
         <section className="flex justify-center items-center">
-            <form className="w-300 h-15 bg-[#EEF6FA] flex justify-center items-center gap-[20px] mt-10 rounded-xl">
+            <form className="w-300 h-15 bg-[#EEF6FA] flex justify-center items-center gap-5 mt-10 rounded-xl">
                 <input type="text" name="carIdOwnerorSellerInfo" className="w-100 text-gray-700 ml-5 focus:border-none focus:outline-none" placeholder="Car ID or owner/seller's name, phone or email" />
                 <select name="status" className="w-35 text-gray-400">
                     <option value="">Status</option>
