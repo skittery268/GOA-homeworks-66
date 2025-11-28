@@ -18,8 +18,7 @@ const Cars = () => {
         setButton2(false);
         setButton3(true)
     }
-
-    console.log(cars2)
+    
     return (
         <section className="min-h-200 w-full bg-[#EEF6FA] mt-10 flex justify-center items-center flex-col">
             <p className="text-[60px] font-bold mt-20">Featured cars</p>

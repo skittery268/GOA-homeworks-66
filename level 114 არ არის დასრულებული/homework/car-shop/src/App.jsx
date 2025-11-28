@@ -7,8 +7,11 @@ import Portfolio from "./pages/Portfolio"
 import Blog from "./pages/Blog"
 import Shop from "./pages/Shop"
 import Contact from "./pages/Contact"
+import SetCars from "./components/SetCars"
+
 
 const App = () => {
+  SetCars();
   return (
     <>
       <Nav />
