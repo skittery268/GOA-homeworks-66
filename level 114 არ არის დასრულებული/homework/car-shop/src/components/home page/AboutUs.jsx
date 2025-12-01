@@ -11,7 +11,7 @@ const AboutUs = () => {
                 <div className=" h-160 w-130 flex flex-col justify-center items-start gap-10">
                     <h1 className="text-7xl">Customize your ride with our expert services today!</h1>
                     <p className="text-[18px] text-[#6A728D]">Sed ut perspiciatis unde omnis iste natus ut perspic iatis unde omnis iste perspiciatis ut perspiciatis unde iste natus.</p>
-                    <Link to={"/"} className="bg-red-600 pt-4 pb-4 pl-7 pr-7 text-white rounded-xl hover:bg-red-700">About Us</Link>
+                    <Link to={"/pages/about-us"} className="bg-red-600 pt-4 pb-4 pl-7 pr-7 text-white rounded-xl hover:bg-red-700">About Us</Link>
                 </div>
             </div>
             <div className="flex justify-center items-center mt-30 gap-7">

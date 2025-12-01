@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import DropDownMenu from "./utils/DropDownMenu";
 
 const Nav = () => {
     return (
@@ -8,7 +9,7 @@ const Nav = () => {
                 <Link to={"/home"} className="text-4xl font-bold">Cars</Link>
                 <ul className="flex gap-10 justify-center items-center">
                     <li><Link to={"/home"} className="font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-0.5 after:bg-black after:duration-300 hover:after:w-full">Home</Link></li>
-                    <li><Link to={"/pages"} className="font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-0.5 after:bg-black after:duration-300 hover:after:w-full">Pages</Link></li>
+                    <DropDownMenu title={"Pages"} items={[{label: "About Us", to: "/pages/about-us"}, {label: "Our Services", to: "/pages/our-services"}, {label: "Our Agents", to: "/pages/our-agents"}, {label: "FAQs", to: "/pages/faqs"}, {label: "Pricing", to: "/pages/pricing"}, {label: "Contacts", to: "/pages/contacts"}]} height={"h-70"} />
                     <li><Link to={"/cars"} className="font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-0.5 after:bg-black after:duration-300 hover:after:w-full">Cars</Link></li>
                     <li><Link to={"/portfolio"} className="font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-0.5 after:bg-black after:duration-300 hover:after:w-full">Portfolio</Link></li>
                     <li><Link to={"/blog"} className="font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-0.5 after:bg-black after:duration-300 hover:after:w-full">Blog</Link></li>

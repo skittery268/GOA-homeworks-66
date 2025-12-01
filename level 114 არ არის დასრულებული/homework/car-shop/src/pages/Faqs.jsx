@@ -1,4 +1,4 @@
-const Pages = () => {
+const Faqs = () => {
     return (
         <>
 
@@ -6,4 +6,4 @@ const Pages = () => {
     )
 }
 
-export default Pages;
+export default Faqs;
