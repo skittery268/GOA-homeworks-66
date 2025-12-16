@@ -1,0 +1,12 @@
+[
+    { "id": 1, "name": "Wireless Mouse", "price": 19.99, "category": "Electronics", "description": "Compact wireless mouse with ergonomic design." },
+    { "id": 2, "name": "Bluetooth Headphones", "price": 49.99, "category": "Electronics", "description": "High-quality over-ear Bluetooth headphones." },
+    { "id": 3, "name": "Laptop Stand", "price": 29.99, "category": "Office", "description": "Adjustable aluminum laptop stand." },
+    { "id": 4, "name": "Mechanical Keyboard", "price": 89.99, "category": "Electronics", "description": "RGB-backlit mechanical keyboard with blue switches." },
+    { "id": 5, "name": "Travel Backpack", "price": 39.99, "category": "Accessories", "description": "Durable water-resistant travel backpack." },
+    { "id": 6, "name": "Stainless Steel Bottle", "price": 14.99, "category": "Home", "description": "Insulated steel bottle for hot and cold drinks." },
+    { "id": 7, "name": "Yoga Mat", "price": 24.99, "category": "Sports", "description": "Non-slip thick yoga mat." },
+    { "id": 8, "name": "Gaming Chair", "price": 159.99, "category": "Furniture", "description": "Ergonomic gaming chair with adjustable armrests." },
+    { "id": 9, "name": "Smart Watch", "price": 99.99, "category": "Electronics", "description": "Fitness tracking smartwatch with heart-rate monitor." },
+    { "id": 10, "name": "Portable Charger", "price": 22.99, "category": "Electronics", "description": "10000mAh fast-charging power bank." }
+]
