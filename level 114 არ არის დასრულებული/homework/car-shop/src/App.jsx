@@ -14,7 +14,6 @@ import Faqs from "./pages/Faqs"
 import Pricing from "./pages/Pricing"
 import Contacts from "./pages/Contacts"
 
-
 const App = () => {
   SetCars();
   return (
