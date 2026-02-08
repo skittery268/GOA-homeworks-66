@@ -1,0 +1,42 @@
+[
+  {
+    "username": "john_doe",
+    "numbers": [5, 12, 23, 34, 45]
+  },
+  {
+    "username": "alice_smith",
+    "numbers": [3, 8, 15, 21, 42]
+  },
+  {
+    "username": "michael_brown",
+    "numbers": [7, 14, 28, 35, 49, 56]
+  },
+  {
+    "username": "emma_jones",
+    "numbers": [1, 4, 9, 16, 25]
+  },
+  {
+    "username": "daniel_wilson",
+    "numbers": [2, 6, 18, 24, 30]
+  },
+  {
+    "username": "sophia_taylor",
+    "numbers": [11, 22, 33, 44, 55]
+  },
+  {
+    "username": "oliver_anderson",
+    "numbers": [10, 20, 30, 40, 50]
+  },
+  {
+    "username": "isabella_thomas",
+    "numbers": [13, 17, 19, 23, 29]
+  },
+  {
+    "username": "william_moore",
+    "numbers": [6, 12, 18, 24, 36]
+  },
+  {
+    "username": "charlotte_martin",
+    "numbers": [9, 18, 27, 36, 45]
+  }
+]
