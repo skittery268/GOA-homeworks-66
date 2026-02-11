@@ -1,0 +1,178 @@
+body {
+    background-color: #36384D;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    height: 450px;
+    width: 700px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#content1 {
+    height: 90%;
+    width: 42%;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+#content2 {
+    height: 90%;
+    width: 46%;
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#h1 {
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#p1 {
+    font-size: 13px;
+    width: 270px;
+}
+
+.p {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.p span {
+    font-size: 13px;
+}
+
+.p img {
+    height: 15px;
+    margin-right: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+form label {
+    font-size: 10px;
+}
+
+form input {
+    height: 20px;
+    width: 90%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid #B8B7BD;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form input::placeholder {
+    color: #B8B7BD;
+}
+
+form button {
+    height: 40px;
+    width: 98%;
+    border-radius: 5px;
+    border: none;
+    background-color: #232742;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #FF537B, #FF693E);
+}
+
+#error-message {
+    color: rgb(255, 42, 42);
+    font-size: 10px;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    padding: 0px;
+    margin-bottom: 7px;
+}
+
+#container2 {
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    display: none;
+}
+
+#container2 div {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container2 div img {
+    height: 50px;
+    width: 50px;
+}
+
+#container2 div h1 {
+    font-size: 50px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+#container2 div p {
+    font-size: 15px;
+}
+
+#container2 div button {
+    height: 40px;
+    background-color: #232742;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#container2 div button:hover {
+    background: linear-gradient(to right, #FF537B, #FF693E);
+}
+
+.placeholder::placeholder {
+    color: red;
+}
+
+input:focus {
+    outline: none;
+}
