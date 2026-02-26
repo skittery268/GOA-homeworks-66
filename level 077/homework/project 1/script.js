@@ -14,9 +14,14 @@ form.addEventListener("submit", (e) => {
         p.style.display = "flex";
         input.style.backgroundColor = "#FFE8E8";
         input.style.borderColor = "#BF7D78";
-        input.classList.add("placeholder")
+        input.classList.add("placeholder");
         return;
     }
+
+    p.style.display = "none";
+    input.style.backgroundColor = "white";
+    input.style.borderColor = "#B8B7BD"
+    input.classList.remove("placeholder");
 
     e.target.reset();
 
