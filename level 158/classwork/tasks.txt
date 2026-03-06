@@ -1,0 +1,7 @@
+1) port და  monguri ცვლადები შექმენით .env ფაილში უსაფრთხოებისთვის, შემდეგ დააინსტალირეთ dotenv და გამოიყენეთ 
+კონფიგი რაც შეიძლება ზემოთ app.jsში
+2) შექმენით error.controller.js ფაილი კონტროლერების ფოლდერში და გადაიტანეთ გლობალური ერრორების მართველი ფუნქცია 
+მაგ ფაილშ შემდეგ დააიმპორტეთ App.js ში
+3) დაამატეთ Login კონტროლერი და როუტე
+4) შექმენით Post model props: title, content, userId (make sure to ref user and type objectId) also add timestaps
+
