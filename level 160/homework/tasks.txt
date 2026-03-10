@@ -1,0 +1,15 @@
+1) გადახედეთ ქვემოთ მოცემულ რესურსებს JWT - ს შესახებ, შემდეგ კი კომენტარების სახით ახსენით თუ რაში 
+გამოიყანება ის
+
+https://jwt.app/blog/what-is-jwt/
+https://en.wikipedia.org/wiki/JSON_Web_Token
+https://www.geeksforgeeks.org/web-tech/json-web-token-jwt/
+https://medium.com/@Esh./understanding-jwt-how-it-works-structure-best-practices-77c75105d9ab
+2) server - ის მხარეს თქვენს პროექტში დაამატეთ protect middleware ფუნქციაც, რომლის მთავარი დავალება 
+იქნება ის, რომ დაადასტუროს მომხმარებლის იდენტობა შეამოწმოს არის თუ არა token ვალიდური და თუ არის 
+მიანიჭოს req ობიექტს user ობიექტი, auth.controller.js - ის ფაილში კი შეცვალეთ login - ის controller - ი 
+ისე, რომ როდესაც მომხმარებელი გაივლის ავტორიზაციას შეიქმნას signed token მომხმარებლის ინფორმაციით 
+როგორიცაა - (id, role), protect middleware ფუნქცია გამოიყენეთ router - ში, და გატესტეთ ყველაფრის მუშაობა 
+postman - ით
+
+JWT - თვის, შექმენით JWT_SECRET, JWT_EXPIRES_IN ცვლადები .env - ფაილში
