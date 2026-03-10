@@ -4,6 +4,7 @@ import Register from "./pages/Register"
 import Nav from "./components/UI/Nav"
 import Profile from "./pages/Profile"
 import Protect from "./components/Protect"
+import Posts from "./pages/Posts"
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/profile" element={<Protect><Profile /></Protect>} />
+				<Route path="/posts" element={<Protect><Posts /></Protect>} />
 			</Routes>
 		</>
 	)

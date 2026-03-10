@@ -6,7 +6,8 @@ const Register = () => {
     const [formData, handleChange, handleSubmit] = useForm({
         fullname: "",
         email: "",
-        password: ""
+        password: "",
+        id: Date.now()
     });
 
     const { register } = useAuth();

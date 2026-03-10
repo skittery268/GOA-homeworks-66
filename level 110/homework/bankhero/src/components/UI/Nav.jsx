@@ -32,6 +32,11 @@ const Nav = () => {
                                         Profile
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link to={'/posts'} className="text-blue-700 hover:text-blue-600 transition-colors font-medium">
+                                        Posts
+                                    </Link>
+                                </li>
                             </>
                         ) : (
                             <>

@@ -1,12 +1,15 @@
+import UploadPost from "../components/UploadPost";
 import { useAuth } from "../context/auth.context";
+import { usePosts } from "../context/PostsContext";
 
 const Profile = () => {
     const { user } = useAuth();
+    const { posts } = usePosts();
 
     const splitedFullname = user.fullname.toUpperCase().split(" ");
 
     return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-6 space-y-8">
             <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
                 {/* Left / Avatar panel */}
                 <div className="md:w-1/3 bg-linear-to-br from-indigo-600 to-purple-600 p-8 flex flex-col items-center justify-center text-white">
@@ -55,6 +58,25 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <UploadPost />
+
+            <h1 className="mt-8 text-2xl font-semibold text-gray-700">Your Posts:</h1>
+            <div className="mt-4 w-full max-w-3xl space-y-4">
+                {posts.map((p, index) => {
+                    if (p.userId === user.id) {
+                        return (
+                            <section
+                                key={index}
+                                className="bg-white p-4 rounded-lg shadow-md"
+                            >
+                                <h2 className="text-lg font-semibold mb-1">{p.title}</h2>
+                                <p className="text-gray-600">{p.content}</p>
+                            </section>
+                        )
+                    }
+                })}
             </div>
         </div>
     );
