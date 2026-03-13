@@ -1,0 +1,17 @@
+1) დაასრულეთ მოცემული პროექტი (JS - ით) https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp
+
+2) შექენით Promise უნდა გადაეცეს ორი ფუნქცია resolve, reject - მასში შექმენით ერთი ცვალდი სადაც 
+შეინახავთ საათს, შეამოწმეთ იმ შემთხვევაში თუ ცვალდში შენახული საათის მნიშვნელობა უდრის ამჟამინდელ საათს 
+გამოიძახეთ resolve ფუნქცია და დააბრუნეთ მნიშვნელობა "Your time matches my current local time" სხვა 
+შემთხვევაში კი გამოიძახეთ reject - ი და გადაეცით მნიშვნელობა "Your time does not match to my current 
+local time" მინიშნება გამოიყენეთ Date ჩაშენებული ობიექტი
+
+3) შექმენით Promise უნდა გადაეცეს ორი ფუნქცია resolve, reject - მასში კი შექმენით ერთი ცვლადი სადაც 
+შეინახავთ რაიმე რიცხვს შეამოწმეთ თუ რიცხვი არის ლუწი გამოიძახეთ resolve - ფუნქცია და გადაეცით 
+მნიშვნელობა "The Number is even" სხვა შემთხვევაში კი "The Number is odd"
+
+4) კომენტარების სახით ახსენით თუ რა განასხვავებაა setTimeout - სა და setInterval - ს შორის
+
+5) შექმენით ფუნცია რომელსაც გამოაქვს ტექსტი Hello after 5 seconds 5 წამის შემდეგ, გამოიყენეთ setTimeout
+
+6) შექმენით ფუნქცია რომელიც ბეჭდავს Hello every 4 seconds ყოველ 4 წამში ერთხელ
