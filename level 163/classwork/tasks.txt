@@ -1,0 +1,4 @@
+1) დაინსტალირეთ multer თქვენს ერვერზე, შექმენით image.js utils ფოლდერში, შემდეგ 
+შექმენით storage oბიექტი და საბოლოოდ upload ობიექი
+
+დოკუმენტაცია: https://www.npmjs.com/package/multer
