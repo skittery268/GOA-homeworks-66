@@ -1,0 +1,4 @@
+1) server - ის მხარეს დაამატეთ, message.controller.js - ის ფაილი, სადაც გექნებათ ორი controller - 
+ი, sendMessage, getMessages შესაბამისი ლოგიკით, აგრეთვე message.router, message.model ფაილები, 
+client - ის მხარეს მოცემული ფუნქციები გამოიყენეთ და გატესტეთ chatting - ის მუშაობა სხვადასხვა 
+account - ებით + Level 165 - ზე მოცემული დავალება ყველამ დაასრულეთ
