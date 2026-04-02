@@ -40,6 +40,17 @@ const deleteGroup = catchAsync(async (req, res, next) => {
     });
 })
 
+const getUserGroups = catchAsync(async (req, res, next) => {
+    const groups = await Group.find({ members: req.userId });
+
+    res.status(200).json({
+        status: "success",
+        data: {
+            groups
+        }
+    });
+})
+
 const joinGroup = catchAsync(async (req, res, next) => {
     const { id } = req.params;
 
@@ -65,4 +76,4 @@ const joinGroup = catchAsync(async (req, res, next) => {
     });
 })
 
-module.exports = { createGroup, deleteGroup, joinGroup };
+module.exports = { createGroup, deleteGroup, joinGroup, getUserGroups };

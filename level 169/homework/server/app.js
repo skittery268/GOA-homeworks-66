@@ -16,6 +16,8 @@ const globalErrorHandler = require("./controllers/error.controller");
 // Modules
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
+const groupRouter = require("./routers/group.router");
+const messageRouter = require("./routers/message.router");
 
 const app = express();
 const server = http.createServer(app);
@@ -38,6 +40,8 @@ app.use(express.json());
 
 // Routers
 app.use("/api/auth", authRouter);
+app.use("/api/groups", groupRouter);
+app.use("/api/messages", messageRouter);
 
 // Global Error Handler
 app.use(globalErrorHandler);

@@ -19,7 +19,7 @@ const groupSchema = new mongoose.Schema({
         type: Boolean,
         default: true
     }
-})
+}, { timestamps: true });
 
 const Group = mongoose.model("Group", groupSchema);
 
