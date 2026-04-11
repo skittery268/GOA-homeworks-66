@@ -1,0 +1,77 @@
+// Servers
+const express = require("express");
+const cors = require("cors");
+const http = require("http");
+const { Server } = require("socket.io");
+
+// Configs
+const connectDB = require("./configs/mongo.config");
+
+// Routres
+const authRouter = require("./routers/auth.router");
+
+// Controllers
+const globalErrorHandler = require("./controllers/error.controller");
+
+// Modules
+require("dotenv").config();
+const cookieParser = require("cookie-parser");
+const groupRouter = require("./routers/group.router");
+const messageRouter = require("./routers/message.router");
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server, {
+    cors: {
+        origin: "http://localhost:5173",
+        credentials: true
+    }
+})
+
+// Helper Middlewares
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
+app.use(cookieParser({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
+app.use(express.json());
+
+app.use((req, res, next) => {
+    req.io = io;
+    next();
+})
+
+// Routers
+app.use("/api/auth", authRouter);
+app.use("/api/groups", groupRouter);
+app.use("/api/messages", messageRouter);
+
+// Global Error Handler
+app.use(globalErrorHandler);
+
+io.on("connection", (socket) => {
+    console.log(`User with id ${socket.id} connected!`);
+
+    socket.on("joinGroup", (groupId) => {
+        if (!groupId) return;
+        socket.join(groupId.toString());
+    })
+
+    socket.on("leaveGroup", (groupId) => {
+        if (!groupId) return;
+        socket.leave(groupId.toString());
+    })
+
+    socket.on("disconnect", (reason) => {
+        console.log(`User with id ${socket.id} disconnected becouse of ${reason}`);
+    })
+})
+
+server.listen(3000, () => {
+    console.log("Server Started!");
+
+    connectDB();
+})

@@ -1,0 +1,3 @@
+1) თქვენს პროექტში დაამატეთ friendRequest, friendShip model/controllers/routers - ები თავისი ლოგიკით
+
+(შექმენით საჭირო controller - ები, sendFriendRequest, CancelFriendRequest და ა.შ.)
