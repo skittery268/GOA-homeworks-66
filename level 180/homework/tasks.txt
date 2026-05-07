@@ -1,0 +1,32 @@
+1) ქვემოთ მოცემული რეპოზიტორია და - clone - ეთ, შემდეგ კი მოცემულ პროექტს დაუმატეთ email verification - ი, 
+mailtrap - ის გამოყენებით (მნიშვნელოვანი დეტალები ახსენით კომენტარების სახით)
+
+https://github.com/Cxvarisorka/e-commerce
+
+2) შექმენით თქვენი branch - მსგავსი სახელით
+
+cxvaradze/feat/email-verification
+3) პროექტში შეტანილი ცვლილებები კი ატვირთეთ თქვენს branch - ზე
+
+შემდეგ კი მოცემულ რეპოზიტორიასთან გამოიყენეთ pull request - იმისათვის, რომ მოხდეს თქვენი branch - ის ნახვა, და 
+რეპოზიტორიის მთავარ branch - თან გაერთიანება
+
+ქვემოთ მოცემულია ბრძანებები რომლის გამოყენებაც დაგჭირდებათ
+Git Commands
+git branch - ამ ბრძანების გამოყენებით თქვენ შეგიძლიათ ნახოთ თუ რომელ branch - ზე იმყოფებით
+
+git checkout Branch - ის სახელი - ამ ბრძანების გამოყენებით თქვენ შეგიძლიათ გადახვიდეთ სხვადასხვა branch - ზე, 
+მაგალითად git checkout cxvaradze/feat/email-verification - გადახვალთ 
+
+* cxvaradze/feat/email-verification - branch - ზე
+
+git branch Branch - ის სახელი - ამ ბრძანების გამოყენებით თქვენ შეგიძლიათ ახალი branch - ის შექმენა
+
+git push origin Branch - ის სახელი - ამ ბრძანების გამოყენებით, შეგეძლებათ პროექტში შეტანილი ცვლილებების 
+მითითებულ Branch - ზე ატვირთვა
+
+https://www.gitkraken.com/learn/git/commands
+https://git-scm.com/docs/git-branch
+https://www.w3schools.com/git/git_branch.asp?remote=GitHub
+
+Done

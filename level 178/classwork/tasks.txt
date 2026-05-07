@@ -1,0 +1,22 @@
+1) გააკეთეთ რეპოზიტორიის კლონირება
+
+git clone https://github.com/Cxvarisorka/chat66.git
+
+2) დაამატეთ env ფაილი
+
+NODE_ENV=prod
+MONGO_URI=mongodb+srv://lcxvaradze2006_db_user:xGY4XdqPqbo9Lt0e@cluster0.n7pyizf.mongodb.
+net/chat?appName=Cluster0
+
+JWT_SECRET=562b3b8208e38e4858084086be78f92f86700b7946aa7afe5259ec7beb2ff795a66950632059fbba2
+9655dd71facd30f0d7a6a9123126818ee1e70b5b78a5d89
+JWT_EXPIRES=7d
+
+COOKIE_EXPIRES=7
+
+CLIENT_URL=https://chat66-indol.vercel.app/
+
+3) სანამ დაჰოსტავთ სერვერს იქამდე შენიდთ mongodb შ და შექმენით პროექტი, შემდეგ კი მონაცემთა 
+ბაზისთის სერვერი
+
+all done
