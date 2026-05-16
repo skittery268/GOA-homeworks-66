@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #F0F0F0;
+}
+
+#container {
+    background-color: white;
+    height: 450px;
+    width: 600px;
+    border-radius: 10px 10px 150px 10px;
+}
+
+#top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#top form {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+    position: relative;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 40px;
+}
+
+#top form .input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    width: 100px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: gray;
+}
+
+input:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+}
+
+button {
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+    border-radius: 100%;
+    background-color: hsl(259, 100%, 65%);
+    height: 50px;
+    width: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+#bottom {
+    height: 300px;
+    margin-left: 30px;
+    line-height: 10px;
+}
+
+span {
+    color: hsl(259, 100%, 65%);
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+}
