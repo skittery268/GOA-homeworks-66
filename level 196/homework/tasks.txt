@@ -1,0 +1,1 @@
+1) CasaClean პროექტს ჩაუმატეთ reviews model / controller / router - ები.

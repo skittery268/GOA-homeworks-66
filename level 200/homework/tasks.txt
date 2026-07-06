@@ -1,0 +1,8 @@
+1) დაასრულეთ claude code 101 კურსი
+
+Done
+
+2) გატესტეთ CasaClean - ის დაჰოსტილი API - ის ყველა endpoint - ი: https://casaclean-0tvo.onrender.com
+ასევე აუცილებლად შეამოწმეთ ClickUp - ი.
+
+Done

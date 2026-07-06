@@ -1,0 +1,1 @@
+1) პროექტს დაუმატეთ service model / controller - ები.

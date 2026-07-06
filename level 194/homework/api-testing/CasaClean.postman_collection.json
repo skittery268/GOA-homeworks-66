@@ -1,0 +1,703 @@
+{
+  "info": {
+    "name": "CasaClean API",
+    "_postman_id": "casaclean-api-collection",
+    "description": "QA test collection for the CasaClean backend API.\n\nHOW TO USE:\n1. Make sure the server is running (see api-testing/00-setup.md).\n2. This collection has variables. Check the {} icon (top right) to see/edit them:\n   - baseUrl: http://localhost:3000/api/v1  (change if your server runs elsewhere)\n   - email / password: the user you sign in with\n   - cityId / serviceId / specialRequestId / bookingId: filled in for you after you create each thing\n3. Run requests in order: Auth > Signup, verify email by hand, Signin, then City/Service, Special Request, Booking.\n4. The login cookie (lt) is kept automatically by Postman after Signin, so the\n   admin requests just work as long as your signed-in user is an admin.\n\nNote: requests that create a city, service, special request or booking automatically\nsave the new id into the matching variable, so the Get/Edit/Delete requests reuse them.\nBooking notes: creating a booking needs a logged-in user (admin role not required), but\nlisting all / get-by-id / edit / delete are admin only. Create a special request first if\nyou want to test the specialRequests add-ons on a booking.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000/api/v1" },
+    { "key": "email", "value": "maria@example.com" },
+    { "key": "password", "value": "secret123" },
+    { "key": "cityId", "value": "" },
+    { "key": "serviceId", "value": "" },
+    { "key": "specialRequestId", "value": "" },
+    { "key": "bookingId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auth/signup", "host": ["{{baseUrl}}"], "path": ["auth", "signup"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullname\": \"Maria Rossi\",\n  \"email\": \"{{email}}\",\n  \"phone\": \"+39 333 1112233\",\n  \"password\": \"{{password}}\"\n}"
+            },
+            "description": "Create a new account. Expect 201. The account is NOT active until you click the verify link in the email (check your Mailtrap inbox)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 201 Created', () => pm.response.code === 201);",
+                  "pm.test('Success status', () => pm.response.json().status === 'success');"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Signin",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auth/signin", "host": ["{{baseUrl}}"], "path": ["auth", "signin"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}"
+            },
+            "description": "Log in. Expect 200 and an 'lt' cookie. The user's email must be verified first, otherwise expect 403."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('Got a user back (no password)', () => {",
+                  "  const u = pm.response.json().data.user;",
+                  "  pm.expect(u).to.be.an('object');",
+                  "  pm.expect(u.password).to.be.undefined;",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Verify Email (paste token)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/verify-email/PASTE_TOKEN_HERE",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "verify-email", "PASTE_TOKEN_HERE"]
+            },
+            "description": "Confirm an email. Normally opened in a browser from the email link. Replace PASTE_TOKEN_HERE with the real token. This REDIRECTS (no JSON) to the client signin page with ?verified=success or ?verified=failed."
+          }
+        },
+        {
+          "name": "Resend Verification",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/auth/resend-verification", "host": ["{{baseUrl}}"], "path": ["auth", "resend-verification"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{email}}\"\n}"
+            },
+            "description": "Send the verification email again. Always returns 200 with a generic message (on purpose, so nobody can find which emails exist)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Google Login (open in browser)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/auth/google", "host": ["{{baseUrl}}"], "path": ["auth", "google"] },
+            "description": "Start Google login. Test this by hand in a browser (it redirects to Google's sign-in page)."
+          }
+        },
+        {
+          "name": "Get Me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/auth/me", "host": ["{{baseUrl}}"], "path": ["auth", "me"] },
+            "description": "Get your own profile. Needs the login cookie. Expect 200 with your user. Without a cookie expect 401."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('Returns a user', () => pm.expect(pm.response.json().data.user).to.be.an('object'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/auth/logout", "host": ["{{baseUrl}}"], "path": ["auth", "logout"] },
+            "description": "Log out. Needs the login cookie. Expect 200 and the 'lt' cookie gets cleared."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "City",
+      "item": [
+        {
+          "name": "Get Cities (list)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/city?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["city"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "Public. List cities with paging. Expect 200 with data.cities (a list), cityCount and length."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('cities is a list', () => pm.expect(pm.response.json().data.cities).to.be.an('array'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add City (admin)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/city", "host": ["{{baseUrl}}"], "path": ["city"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rome\",\n  \"workingHourStarts\": \"09:00\",\n  \"workingHourEnds\": \"17:30\"\n}"
+            },
+            "description": "Admin only. Create a city. Expect 201. Name capital letter is fixed automatically. The new id is saved to the cityId variable for the other city requests."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 201 Created', () => pm.response.code === 201);",
+                  "const city = pm.response.json().data.city;",
+                  "if (city && city._id) { pm.collectionVariables.set('cityId', city._id); }",
+                  "pm.test('Name was capitalized', () => pm.expect(city.name).to.eql('Rome'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get City by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/city/{{cityId}}", "host": ["{{baseUrl}}"], "path": ["city", "{{cityId}}"] },
+            "description": "Public. Get one city. Uses the cityId variable (set by Add City). Expect 200. Unknown id = 404, broken id = 400."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Edit City (admin)",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/city/{{cityId}}", "host": ["{{baseUrl}}"], "path": ["city", "{{cityId}}"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"workingHourEnds\": \"18:00\",\n  \"enabled\": false\n}"
+            },
+            "description": "Admin only. Change only the fields you send. Expect 200. enabled:false should be honoured (off switch)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('enabled is now false', () => pm.expect(pm.response.json().data.city.enabled).to.eql(false));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Delete City (admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/city/{{cityId}}", "host": ["{{baseUrl}}"], "path": ["city", "{{cityId}}"] },
+            "description": "Admin only. Delete a city. Expect 200. Deleting again = 404."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Service",
+      "item": [
+        {
+          "name": "Get Services (list)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/service?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["service"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "Public. List services with paging. Expect 200 with data.services and serviceCount. Each service shows its full cities."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('services is a list', () => pm.expect(pm.response.json().data.services).to.be.an('array'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Service - all cities (admin)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/service", "host": ["{{baseUrl}}"], "path": ["service"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Deep cleaning\",\n  \"description\": \"Full deep clean\",\n  \"pricePerHour\": 30,\n  \"allCities\": true\n}"
+            },
+            "description": "Admin only. Create a service offered EVERYWHERE. Expect 201, allCities true, cities empty. The new id is saved to serviceId."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 201 Created', () => pm.response.code === 201);",
+                  "const s = pm.response.json().data.service;",
+                  "if (s && s._id) { pm.collectionVariables.set('serviceId', s._id); }",
+                  "pm.test('allCities is true', () => pm.expect(s.allCities).to.eql(true));",
+                  "pm.test('cities list is empty', () => pm.expect(s.cities).to.be.an('array').that.is.empty);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Service - specific city (admin)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/service", "host": ["{{baseUrl}}"], "path": ["service"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Regular cleaning\",\n  \"description\": \"Weekly cleaning for homes\",\n  \"pricePerHour\": 19.9,\n  \"cities\": [\"{{cityId}}\"]\n}"
+            },
+            "description": "Admin only. Create a service offered in ONE city. Needs a real cityId (create a city first). Expect 201. A fake city id = 400."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 201 Created', () => pm.response.code === 201);"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Service by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/service/{{serviceId}}", "host": ["{{baseUrl}}"], "path": ["service", "{{serviceId}}"] },
+            "description": "Public. Get one service. Uses the serviceId variable. Expect 200. Unknown id = 404, broken id = 400."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Edit Service (admin)",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/service/{{serviceId}}", "host": ["{{baseUrl}}"], "path": ["service", "{{serviceId}}"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pricePerHour\": 25,\n  \"enabled\": false\n}"
+            },
+            "description": "Admin only. Change only the fields you send. Expect 200. If you don't send coverage fields, the cities stay the same."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('enabled is now false', () => pm.expect(pm.response.json().data.service.enabled).to.eql(false));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Delete Service (admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/service/{{serviceId}}", "host": ["{{baseUrl}}"], "path": ["service", "{{serviceId}}"] },
+            "description": "Admin only. Delete a service. Expect 200. Deleting again = 404."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Special Request",
+      "item": [
+        {
+          "name": "Get Special Requests (list)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/special-request?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["special-request"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "Public. List the booking add-ons with paging, newest first. Expect 200 with data.specialRequests (a list) and specialRequestCount."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('specialRequests is a list', () => pm.expect(pm.response.json().data.specialRequests).to.be.an('array'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Special Request (admin)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/special-request", "host": ["{{baseUrl}}"], "path": ["special-request"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Fridge cleaning\",\n  \"description\": \"Clean the inside of the fridge\",\n  \"price\": 15\n}"
+            },
+            "description": "Admin only. Create an add-on. Expect 201. Name capital letter is fixed automatically. Enabled is true by default. The new id is saved to specialRequestId for the other requests (and the Booking requests)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 201 Created', () => pm.response.code === 201);",
+                  "const sr = pm.response.json().data.specialRequest;",
+                  "if (sr && sr._id) { pm.collectionVariables.set('specialRequestId', sr._id); }",
+                  "pm.test('Name was capitalized', () => pm.expect(sr.name).to.eql('Fridge cleaning'));",
+                  "pm.test('Enabled by default', () => pm.expect(sr.enabled).to.eql(true));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Special Request by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/special-request/{{specialRequestId}}", "host": ["{{baseUrl}}"], "path": ["special-request", "{{specialRequestId}}"] },
+            "description": "Public. Get one add-on. Uses the specialRequestId variable (set by Add Special Request). Expect 200. Unknown id = 404, broken id = 400."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Edit Special Request (admin)",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/special-request/{{specialRequestId}}", "host": ["{{baseUrl}}"], "path": ["special-request", "{{specialRequestId}}"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 20,\n  \"enabled\": false\n}"
+            },
+            "description": "Admin only. Change only the fields you send. Expect 200. enabled:false should be honoured (a disabled add-on can't be picked on a new booking)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('enabled is now false', () => pm.expect(pm.response.json().data.specialRequest.enabled).to.eql(false));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Delete Special Request (admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/special-request/{{specialRequestId}}", "host": ["{{baseUrl}}"], "path": ["special-request", "{{specialRequestId}}"] },
+            "description": "Admin only. Delete an add-on. Expect 200. Deleting again = 404. Note: if you want to test bookings with special requests, run the Booking requests BEFORE deleting (or re-create and re-enable the add-on)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Booking",
+      "item": [
+        {
+          "name": "Create Booking (logged-in user)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/booking", "host": ["{{baseUrl}}"], "path": ["booking"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"serviceId\": 1,\n  \"cityId\": 1,\n  \"streetName\": \"Rustaveli Ave\",\n  \"houseNumber\": \"12\",\n  \"propertySize\": \"80m2\",\n  \"doorbellName\": \"Smith\",\n  \"bookingDate\": \"2026-07-01\",\n  \"bookingTime\": \"14:00\",\n  \"hours\": 3,\n  \"cleaners\": 2,\n  \"totalAmount\": 120,\n  \"notes\": \"Please bring eco products\",\n  \"supplies\": [\"vacuum\", \"mop\"]\n}"
+            },
+            "description": "Any logged-in user. Create a booking. Contact name/email come from your account (not the body). serviceId/cityId are NUMBERS. Status defaults to 'confirmed'. Expect 201. The new id is saved to bookingId.\n\nTo test add-ons, add a valid enabled id to specialRequests, e.g.: \"specialRequests\": [\"{{specialRequestId}}\"] (create one in the Special Request group first)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 201 Created', () => pm.response.code === 201);",
+                  "const b = pm.response.json().data.booking;",
+                  "if (b && b._id) { pm.collectionVariables.set('bookingId', b._id); }",
+                  "pm.test('Status defaults to confirmed', () => pm.expect(b.status).to.eql('confirmed'));",
+                  "pm.test('Contact email comes from account', () => pm.expect(b.customerEmail).to.be.a('string'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get My Bookings (logged-in user)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/booking/my?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["booking", "my"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "Any logged-in user. List ONLY your own bookings, newest first. Expect 200 with data.bookings (a list) and bookingCount. Without a cookie = 401."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('bookings is a list', () => pm.expect(pm.response.json().data.bookings).to.be.an('array'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get All Bookings (admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/booking?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["booking"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "Admin only. List ALL bookings (everyone's), newest first. Expect 200 with data.bookings and bookingCount. A normal user = 403, no cookie = 401."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('bookings is a list', () => pm.expect(pm.response.json().data.bookings).to.be.an('array'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Booking by id (admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/booking/{{bookingId}}", "host": ["{{baseUrl}}"], "path": ["booking", "{{bookingId}}"] },
+            "description": "Admin only. Get one booking. Uses the bookingId variable (set by Create Booking). Expect 200. Unknown id = 404, broken id = 400, normal user = 403."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Edit Booking (admin)",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/booking/{{bookingId}}", "host": ["{{baseUrl}}"], "path": ["booking", "{{bookingId}}"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"completed\",\n  \"totalAmount\": 130\n}"
+            },
+            "description": "Admin only. Change only allowed fields (status, dates, hours, cleaners, totalAmount, address, notes, supplies, specialRequests). status must be one of pending/confirmed/cancelled/completed. Fields like user/customerEmail are ignored. Expect 200."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200 OK', () => pm.response.code === 200);",
+                  "pm.test('status is now completed', () => pm.expect(pm.response.json().data.booking.status).to.eql('completed'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Delete Booking (admin)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/booking/{{bookingId}}", "host": ["{{baseUrl}}"], "path": ["booking", "{{bookingId}}"] },
+            "description": "Admin only. Delete a booking. Expect 200. Deleting again = 404. Normal user = 403, no cookie = 401."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.test('Status is 200 OK', () => pm.response.code === 200);"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

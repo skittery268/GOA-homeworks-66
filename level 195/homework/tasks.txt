@@ -1,0 +1,1 @@
+1) CasaClean პროექტს დაუმატეთ sity model / controller / router - ები.

@@ -1,0 +1,5 @@
+1) დოჰოსტილ CasaClean პროექტში ყველაფერი გატესტეთ.
+
+WebSite URL - https://www.casaclean.it/
+
+Done
