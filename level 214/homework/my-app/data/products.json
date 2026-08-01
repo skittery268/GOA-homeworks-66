@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Apple MacBook Pro 14",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80",
+    "description": "A powerful 14-inch laptop designed for professional work, programming, creative tasks, and everyday productivity."
+  },
+  {
+    "id": 2,
+    "name": "Sony WH-1000XM5",
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&q=80",
+    "description": "Premium wireless headphones with advanced noise cancellation, high-quality sound, and a comfortable over-ear design."
+  },
+  {
+    "id": 3,
+    "name": "Apple AirPods Pro",
+    "price": 249,
+    "image": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=1200&q=80",
+    "description": "Compact wireless earbuds featuring active noise cancellation, transparency mode, and a portable charging case."
+  },
+  {
+    "id": 4,
+    "name": "Nike Air Max 270",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80",
+    "description": "Modern lifestyle sneakers with a comfortable sole, lightweight construction, and a distinctive Air Max design."
+  },
+  {
+    "id": 5,
+    "name": "Samsung Galaxy S25",
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=1200&q=80",
+    "description": "A modern Android smartphone with a high-quality display, powerful performance, advanced cameras, and long battery life."
+  },
+  {
+    "id": 6,
+    "name": "Apple Watch Series 10",
+    "price": 429,
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=1200&q=80",
+    "description": "A versatile smartwatch for fitness tracking, notifications, health features, communication, and everyday use."
+  },
+  {
+    "id": 7,
+    "name": "Logitech MX Master 3S",
+    "price": 99,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=1200&q=80",
+    "description": "An ergonomic wireless mouse designed for productivity with precise tracking, customizable buttons, and quiet clicks."
+  },
+  {
+    "id": 8,
+    "name": "Kindle Paperwhite",
+    "price": 159,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2023_Amazon_Kindle_Paperwhite_%281%29.jpg/1280px-2023_Amazon_Kindle_Paperwhite_%281%29.jpg",
+    "description": "A compact e-reader with a high-resolution display designed for comfortable reading at home or on the go."
+  },
+  {
+    "id": 9,
+    "name": "JBL Flip 6",
+    "price": 129,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=1200&q=80",
+    "description": "A portable Bluetooth speaker that delivers powerful sound in a compact and durable design."
+  },
+  {
+    "id": 10,
+    "name": "The North Face Borealis Backpack",
+    "price": 99,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1200&q=80",
+    "description": "A versatile everyday backpack with multiple compartments for carrying a laptop, books, accessories, and personal items."
+  }
+]
