@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Next.js",
+    "description": "Learn the basics of Next.js and build your first modern web application.",
+    "authorId": 101
+  },
+  {
+    "id": 2,
+    "title": "Understanding React Components",
+    "description": "Learn how to create reusable and maintainable React components.",
+    "authorId": 102
+  },
+  {
+    "id": 3,
+    "title": "Introduction to MongoDB",
+    "description": "Explore how MongoDB stores data using databases, collections, and documents.",
+    "authorId": 103
+  },
+  {
+    "id": 4,
+    "title": "JavaScript Array Methods",
+    "description": "Learn how to use map, filter, find, and reduce to work with arrays.",
+    "authorId": 101
+  },
+  {
+    "id": 5,
+    "title": "Building APIs with Express",
+    "description": "Create simple REST APIs using Node.js and the Express framework.",
+    "authorId": 104
+  },
+  {
+    "id": 6,
+    "title": "CSS Grid vs Flexbox",
+    "description": "Understand the main differences between CSS Grid and Flexbox.",
+    "authorId": 102
+  },
+  {
+    "id": 7,
+    "title": "Introduction to TypeScript",
+    "description": "Discover how TypeScript makes JavaScript applications safer and easier to maintain.",
+    "authorId": 105
+  },
+  {
+    "id": 8,
+    "title": "What Is Git?",
+    "description": "Learn the fundamentals of Git and how version control works.",
+    "authorId": 103
+  },
+  {
+    "id": 9,
+    "title": "Understanding REST APIs",
+    "description": "Learn the basic principles of REST and how clients communicate with servers.",
+    "authorId": 104
+  },
+  {
+    "id": 10,
+    "title": "Introduction to Tailwind CSS",
+    "description": "Learn how to build modern user interfaces quickly using Tailwind CSS.",
+    "authorId": 105
+  }
+]

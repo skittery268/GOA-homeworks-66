@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Apple MacBook Pro 14",
+    "price": 1999,
+    "description": "A powerful 14-inch laptop designed for professional work, programming, creative tasks, and everyday productivity."
+  },
+  {
+    "id": 2,
+    "name": "Sony WH-1000XM5",
+    "price": 399,
+    "description": "Premium wireless headphones with advanced noise cancellation, high-quality sound, and a comfortable over-ear design."
+  },
+  {
+    "id": 3,
+    "name": "Apple AirPods Pro",
+    "price": 249,
+    "description": "Compact wireless earbuds featuring active noise cancellation, transparency mode, and a portable charging case."
+  },
+  {
+    "id": 4,
+    "name": "Nike Air Max 270",
+    "price": 150,
+    "description": "Modern lifestyle sneakers with a comfortable sole, lightweight construction, and a distinctive Air Max design."
+  },
+  {
+    "id": 5,
+    "name": "Samsung Galaxy S25",
+    "price": 799,
+    "description": "A modern Android smartphone with a high-quality display, powerful performance, advanced cameras, and long battery life."
+  },
+  {
+    "id": 6,
+    "name": "Apple Watch Series 10",
+    "price": 429,
+    "description": "A versatile smartwatch for fitness tracking, notifications, health features, communication, and everyday use."
+  },
+  {
+    "id": 7,
+    "name": "Logitech MX Master 3S",
+    "price": 99,
+    "description": "An ergonomic wireless mouse designed for productivity with precise tracking, customizable buttons, and quiet clicks."
+  },
+  {
+    "id": 8,
+    "name": "Kindle Paperwhite",
+    "price": 159,
+    "description": "A compact e-reader with a high-resolution display designed for comfortable reading at home or on the go."
+  },
+  {
+    "id": 9,
+    "name": "JBL Flip 6",
+    "price": 129,
+    "description": "A portable Bluetooth speaker that delivers powerful sound in a compact and durable design."
+  },
+  {
+    "id": 10,
+    "name": "The North Face Borealis Backpack",
+    "price": 99,
+    "description": "A versatile everyday backpack with multiple compartments for carrying a laptop, books, accessories, and personal items."
+  }
+]
