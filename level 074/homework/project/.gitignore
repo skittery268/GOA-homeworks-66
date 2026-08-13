@@ -10,6 +10,7 @@
 yarn.debug.log*
 yarn.error.log*
 npm-debug.log*
+assets
 
 # Environment and secrets
 .env
