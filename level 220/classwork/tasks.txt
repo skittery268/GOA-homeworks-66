@@ -1,0 +1,11 @@
+1) დააინსტალირეთო expo გამოყენებით react-native ის პროექტი თქვენს კომპიუტერში
+
+აგრეთვე ჩაიწერეთ Expo Go აპლიკაცია
+
+(დაინსტალირებისას აირჩიეთ Expo SDK 54 Version) 
+
+npx create-expo-app@latest MyFirstExpoApp --template blank-typescript
+
+2) შექმენით Todo App დამატების და წაშლის ფუნქციით
+
+3) დაამატეთ შეცვლის ლოგიკაც.
