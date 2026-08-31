@@ -1,0 +1,1 @@
+1) დააინსტალირეთ @react-navigation/native, @react-navigation/bottom-tabs მოდულები და შექმენით Tab ნავიგაცია 3 გვერით.
