@@ -1,0 +1,53 @@
+Assignment: Offline-Ready Product List
+Goal
+Build a React Native (Expo) app that shows products from an online store API and keeps working when the internet is gone. You'll also add buttons that fake going offline and online, so you can test the offline behaviour without turning off your Wi-Fi.
+
+API: https://fakestoreapi.com/products
+Libraries: axios, axios-retry, @react-native-async-storage/async-storage (install them with npx expo install)
+
+Part 1: Fetch products
+Create an axios instance with the base URL and a timeout (for example 10 seconds).
+Add automatic retries with axios-retry (3 retries, with a delay that grows after each try).
+Add a "fetch products" button that loads the products and shows them in a FlatList. Each row shows the image, the title and the price (to 2 decimal places).
+Show a loading spinner while the request runs, and disable the fetch button during that time.
+Part 2: Handle errors
+Show a friendly message for each kind of failure:
+
+Situation	Message
+No internet (no response at all)	"Please check your Wi-Fi and try again"
+404	"Products could not be found"
+429	"Too many requests, please wait a moment"
+500	"The store is having trouble, please try again"
+Anything else	"Something went wrong"
+Part 3: Save products on the device
+After a successful fetch, save the first 10 products in AsyncStorage.
+The saved copy must expire after 15 minutes. Store an expiry time next to the data, and when you read it back after that time, delete it and treat it as missing.
+Put the storage code in its own file (for example src/storage/utils.ts) with these functions:
+createCache(key, data, minutes)
+getCache(key): returns the data, or null if it's missing or expired
+clearCache(key)
+If a fetch fails, show the saved products with an "Offline copy" label. Show the error message only when there is no saved copy.
+Part 4: Offline simulation panel
+Add these controls at the top of the screen:
+
+Status bar: green "ONLINE" or red "OFFLINE (simulated)"
+"Go offline" / "Go online" button: switches the simulated mode
+"Clear display" button: empties the list and messages on screen, but keeps the saved copy
+"Clear cache" button: deletes the saved copy from the device
+Important: in offline mode, requests must fail the same way a real dropped connection does. Don't just add an if (offline) check around your fetch code. Use an axios request interceptor that throws a network error while offline mode is on. That way your real retry, error and saved-copy code all run.
+
+Testing: your app must pass this run
+Online, press fetch: all products appear.
+Go offline, clear display, press fetch: 10 products appear with the "Offline copy" label.
+Clear cache, press fetch: the Wi-Fi error message appears and the list is empty.
+Go online, press fetch: all products appear again.
+The spinner shows during every fetch, and the offline fetch takes a moment because of the retries.
+Rules
+TypeScript, with a Product interface (id, title, price, description, category, image)
+npx tsc --noEmit must pass with no errors
+No unused imports or state variables
+Bonus (optional)
+Show when the saved copy was made ("Saved 5 min ago").
+Fetch again automatically when switching back online.
+Add pull-to-refresh on the list.
+Detect the real network state with @react-native-community/netinfo.
